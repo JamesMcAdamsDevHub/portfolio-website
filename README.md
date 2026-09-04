@@ -1,36 +1,80 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
 
-## Getting Started
+## Description
 
-First, run the development server:
+A website to showcase my personal projects and resume for the purpose of providing future prospective employers a glimpse into my skillsets and experience.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Objectives
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> **Note:** This project is currently a work in progress. Objectives will be checked off as they are completed or marked if they are intentionally removed from scope.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Create a strong landing page
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The landing page (Home) must include:
 
-## Learn More
+- [ ] About me
+- [ ] Featured project
+- [ ] Easy navigation to Projects and Resume pages
+- [ ] Links to GitHub and LinkedIn
 
-To learn more about Next.js, take a look at the following resources:
+### Create a data-driven Projects page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The Projects page must include:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [ ] A list of projects generated from project data
+- [ ] Project cards containing relevant project information
+- [ ] Project media, including images and videos
+- [ ] Links to individual project detail pages
+- [ ] Repository links when available
+- [ ] Play links for browser-playable projects when available
+- [ ] Project detail pages generated from centralized project data
 
-## Deploy on Vercel
+### Create a data-driven Resume page
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The Resume page must include:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Professional profile
+- [ ] Work experience
+- [ ] Education
+- [ ] Skills
+- [ ] Resume content loaded from a centralized resume.json file
+- [ ] Downloadable PDF version of my resume
+
+### Support browser-playable projects
+
+Projects with a browser-playable version must include:
+
+- [ ] A Play option from the associated project
+- [ ] A reusable Play page
+- [ ] Support for embedding Unity Web builds
+- [ ] Navigation back to the associated project
+
+### Create a responsive and accessible user interface
+
+The website must include:
+
+- [ ] Responsive layouts for desktop and mobile devices
+- [ ] Clear and consistent navigation
+- [ ] Semantic HTML where appropriate
+- [ ] Keyboard-accessible interactive elements
+- [ ] Appropriate alternative text for informative images
+- [ ] Consistent styling throughout the website
+
+### Create an easily maintainable project system
+
+The website must:
+
+- [ ] Store project information in a centralized JSON file
+- [ ] Allow a project to be added primarily by adding its data and media
+- [ ] Avoid project-specific pages and components when reusable solutions are appropriate
+- [ ] Support optional project information such as repository links, playable demos, and featured status
+
+### Deploy the website
+
+The finished website must:
+
+- [ ] Be statically exported with Next.js
+- [ ] Be automatically deployed through GitHub Actions
+- [ ] Be hosted with GitHub Pages
+- [ ] Be available at jamesmcadams.dev
+- [ ] Use HTTPS
