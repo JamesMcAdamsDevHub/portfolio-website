@@ -99,3 +99,5 @@ npm install --save-dev prettier
 - Set `Editor: Default Formatter` to `Prettier - Code formatter`.
 
 ### Understanding the Next.js Project
+
+> **TODO:** Continue expanding this section as I learn more about the development process.
