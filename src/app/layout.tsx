@@ -26,7 +26,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-        {children}
+
+        <div className="flex-1 bg-linear-to-br from-orange-300 to-amber-100">
+          {children}
+        </div>
       </body>
     </html>
   );

@@ -1,0 +1,7 @@
+{
+  "name": "James McAdams",
+  "title": "Computer Science Student & Software Engineer",
+  "introduction": "I'm a Computer Science student at the University of Central Florida and a Software Engineering Co-op at Curriculum Associates. I enjoy building software that is both practical and interesting to work on, with a particular interest in game development, developer tools, and interactive systems. Much of my personal work focuses on designing modular and extensible systems, including procedural generation tools in Unity, while my professional experience has given me the opportunity to contribute to production software using C#, Unity, and Java. I enjoy tackling problems that require me to understand how the pieces of a system fit together, and I'm always looking for opportunities to expand my skills and build increasingly ambitious projects.",
+  "profileImage": "/images/profile.png",
+  "profileImageAlt": "James McAdams"
+}
