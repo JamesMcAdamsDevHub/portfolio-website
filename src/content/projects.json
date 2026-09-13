@@ -1,0 +1,31 @@
+[
+  {
+    "slug": "track-generation",
+    "title": "Procedural Track Generation Tool - Unity",
+    "link": "https://github.com/JamesMcAdamsDevHub/Unity-CustomTrackGeneration",
+    "description": "A procedural track generation tool built in Unity that allows developers to create customizable, game-ready tracks by drawing and editing paths directly in the editor. The system uses spline sampling, vector-based mathematics, and procedural mesh generation to construct tracks with support for features such as curves, elevation changes, banking, intersections, sidewalks, and other configurable components. The goal is to provide the flexibility of a procedural system while keeping the workflow intuitive and easy to use.",
+    "technologies": ["Unity", "c#"],
+    "startDate": "February 2026",
+    "media": [
+      {
+        "type": "image",
+        "src": "/projects/track-generation/media/track_customization.jpg",
+        "alt": "Customizable tracks",
+        "description": "Customizable tracks"
+      },
+      {
+        "type": "image",
+        "src": "/projects/track-generation/media/track_demo.gif",
+        "alt": "Track generation demo",
+        "description": "Demo of track generation tool"
+      },
+      {
+        "type": "image",
+        "src": "/projects/track-generation/media/street_demo.gif",
+        "alt": "Creating roadways",
+        "description": "Creating roadways"
+      }
+    ],
+    "featured": true
+  }
+]

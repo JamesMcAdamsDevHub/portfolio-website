@@ -25,7 +25,7 @@ export default function Social({ platform }: Platform) {
 
   return (
     <a href={link}>
-      <Image src={imagePath} alt={imageAlt} width={48} height={48} />
+      <Image src={imagePath} alt={imageAlt} width={36} height={36} />
     </a>
   );
 }

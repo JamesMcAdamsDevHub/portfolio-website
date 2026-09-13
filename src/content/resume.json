@@ -1,0 +1,85 @@
+{
+  "name": "James McAdams",
+  "location": "Rockledge, FL 32955",
+  "email": "james.mcadams.dev@gmail.com",
+
+  "skills": {
+    "languages": ["C", "C#", "Java", "Python"],
+    "technologies": ["Unity", "Unreal Engine", "Git", "REST APIs"],
+    "concepts": [
+      "Agile/Scrum",
+      "Object-Oriented Design",
+      "Data Structures & Algorithms"
+    ]
+  },
+
+  "education": [
+    {
+      "school": "University of Central Florida",
+      "location": "Orlando, FL",
+      "degree": "Bachelor of Science in Computer Science",
+      "graduationDate": "May 2028",
+      "gpa": "4.0"
+    }
+  ],
+
+  "experience": [
+    {
+      "company": "Curriculum Associates",
+      "location": "Remote",
+      "title": "Co-op Software Engineer",
+      "startDate": "June 2026",
+      "endDate": null,
+      "details": [
+        "Develop and maintain production software for educational products using Unity, C#, and Java",
+        "Implement features and resolve defects across existing systems",
+        "Participate in code reviews, testing, and technical documentation",
+        "Built tooling to produce JSON datasets containing 10,000+ records for efficient caching and API consumption",
+        "Develop Java API endpoints to fetch and write simulated student data for product testing and demonstrations"
+      ],
+      "featured": true
+    },
+    {
+      "company": "University of Central Florida",
+      "location": "Orlando, FL",
+      "title": "Teaching Assistant - Intro to Object-Oriented Programming / Computer Science 1",
+      "startDate": "August 2025",
+      "endDate": "May 2026",
+      "details": [
+        "Supported 120+ students in Intro to Object-Oriented Programming and 400+ students in Computer Science 1",
+        "Routinely held office hours, worked individually with students, and graded exams and programming assignments",
+        "Led 2 weekly lab sessions for CS1 covering data structures, algorithms, and fundamental CS concepts",
+        "Evaluated and debugged student code to ensure correctness, efficiency, and code quality"
+      ],
+      "featured": false
+    },
+    {
+      "company": "PepsiCo",
+      "location": "Melbourne, FL",
+      "title": "Sales Representative/ Supply Chain Operations Associate Supervisor",
+      "startDate": "July 2020",
+      "endDate": "August 2023",
+      "details": [
+        "Built and maintained strong relationships with 5 high-volume sales accounts",
+        "Ordered 2,000+ cases weekly, minimized out-of-stocks, and avoided unnecessary over-stock",
+        "Led warehouse operations overseeing pallet builds of up to 14,000 cases daily",
+        "Optimized workflow by organizing order fulfillment and improving operational efficiency",
+        "Tracked and verified incoming and outgoing inventory to maintain accuracy and reduce discrepancies"
+      ],
+      "featured": false
+    },
+    {
+      "company": "Country Mart",
+      "location": "Fredericktown, MO",
+      "title": "Assistant Store Manager",
+      "startDate": "October 2017",
+      "endDate": "July 2020",
+      "details": [
+        "Oversaw daily operations and supervised 50+ employees across store functions",
+        "Managed inventory levels, ordered 1,000+ cases weekly, and maintained thousands of SKUs storewide",
+        "Coordinated with vendors to ensure consistent operations and customer experience"
+      ],
+      "featured": false
+    }
+  ]
+}
