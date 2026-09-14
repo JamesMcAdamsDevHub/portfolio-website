@@ -8,7 +8,7 @@ import about from "@/content/about.json";
 
 export default function Home() {
   return (
-    <main className="mx-auto flex w-full max-w-5xl flex-col items-center px-6 py-12">
+    <main className="flex flex-col items-center mx-auto max-w-5xl py-7">
       <section className="flex w-full flex-col items-center gap-8 pb-4 md:flex-row md:items-start">
         <div>
           <Image

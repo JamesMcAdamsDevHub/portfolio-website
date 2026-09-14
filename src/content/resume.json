@@ -13,16 +13,13 @@
     ]
   },
 
-  "education": [
-    {
-      "school": "University of Central Florida",
-      "location": "Orlando, FL",
-      "degree": "Bachelor of Science in Computer Science",
-      "graduationDate": "May 2028",
-      "gpa": "4.0"
-    }
-  ],
-
+  "education": {
+    "school": "University of Central Florida",
+    "location": "Orlando, FL",
+    "degree": "Bachelor of Science in Computer Science",
+    "graduationDate": "May 2028",
+    "gpa": "4.0"
+  },
   "experience": [
     {
       "company": "Curriculum Associates",

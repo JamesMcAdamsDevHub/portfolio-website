@@ -12,32 +12,32 @@ A website to showcase my personal projects and resume for the purpose of providi
 
 The landing page (Home) must include:
 
-- [ ] About me
-- [ ] Featured project
-- [ ] Easy navigation to Projects and Resume pages
-- [ ] Links to GitHub and LinkedIn
+- [x] About me
+- [x] Featured project
+- [x] Easy navigation to Projects and Resume pages
+- [x] Links to GitHub and LinkedIn and Instagram
 
 ### Create a data-driven Projects page
 
 The Projects page must include:
 
-- [ ] A list of projects generated from project data
-- [ ] Project cards containing relevant project information
+- [x] A list of projects generated from project data
+- [x] Project cards containing relevant project information
 - [ ] Project media, including images and videos
-- [ ] Links to individual project detail pages
-- [ ] Repository links when available
+- ~~[ ] Links to individual project detail pages~~
+- [x] Repository links when available
 - [ ] Play links for browser-playable projects when available
-- [ ] Project detail pages generated from centralized project data
+- ~~[ ] Project detail pages generated from centralized project data~~
 
 ### Create a data-driven Resume page
 
 The Resume page must include:
 
-- [ ] Professional profile
-- [ ] Work experience
-- [ ] Education
-- [ ] Skills
-- [ ] Resume content loaded from a centralized resume.json file
+- [x] Professional profile
+- [x] Work experience
+- [x] Education
+- [x] Skills
+- [x] Resume content loaded from a centralized resume.json file
 - [ ] Downloadable PDF version of my resume
 
 ### Support browser-playable projects
@@ -53,19 +53,19 @@ Projects with a browser-playable version must include:
 
 The website must include:
 
-- [ ] Responsive layouts for desktop and mobile devices
-- [ ] Clear and consistent navigation
+- [x] Responsive layouts for desktop and mobile devices
+- [x] Clear and consistent navigation
 - [ ] Semantic HTML where appropriate
 - [ ] Keyboard-accessible interactive elements
-- [ ] Appropriate alternative text for informative images
+- [x] Appropriate alternative text for informative images
 - [ ] Consistent styling throughout the website
 
 ### Create an easily maintainable project system
 
 The website must:
 
-- [ ] Store project information in a centralized JSON file
-- [ ] Allow a project to be added primarily by adding its data and media
+- [x] Store project information in a centralized JSON file
+- [x] Allow a project to be added primarily by adding its data and media
 - [ ] Avoid project-specific pages and components when reusable solutions are appropriate
 - [ ] Support optional project information such as repository links, playable demos, and featured status
 

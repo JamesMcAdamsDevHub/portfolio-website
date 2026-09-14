@@ -22,7 +22,7 @@ export default function ProjectCard({ experience }: ExperienceCardProps) {
             <h2 className="text-xl">{experience.title}</h2>
           </div>
 
-          <div className="text-right font-bold items-right justify-right">
+          <div className="text-right font-bold">
             <p>
               {experience.startDate} -{" "}
               {experience.endDate === null ? "present" : experience.endDate}

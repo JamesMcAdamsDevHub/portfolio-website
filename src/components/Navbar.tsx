@@ -7,7 +7,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full flex md:flex-row md:flex-col items-stretch justify-between border-b border-orange-700 bg-linear-to-br from-orange-700 to-amber-600 text-black">
+    <header className="sticky top-0 z-50 w-full flex md:flex-row md:flex-col items-stretch justify-between border-b border-orange-700 bg-linear-to-br from-orange-700 to-amber-600">
       <p className="hidden md:block text-sm lg:text-2xl py-3 px-8">
         Portfolio Site | James McAdams
       </p>

@@ -3,9 +3,8 @@ import ImageGallery from "@/components/ImageGallery";
 
 type ProjectCardProps = {
   project: {
-    slug: string;
     title: string;
-    link: string | null;
+    repoLink: string | null;
     description: string;
     technologies: string[];
     startDate: string;
@@ -24,9 +23,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <h2 className="text-xl font-bold lg:text-2xl">
             {project.title}
 
-            {project.link !== null && (
+            {project.repoLink !== null && (
               <Link
-                href={project.link}
+                href={project.repoLink}
                 className="ml-2 text-sm font-normal hover:text-blue-600"
               >
                 GitHub ↗
@@ -45,9 +44,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </div>
       <div className="flex px-2 gap-2 text-md">
         <p className="font-bold">Uses:</p>
-        {project.technologies.map((tech) => (
-          <p key={tech}>{tech}</p>
-        ))}
+        {project.technologies.join(" • ")}
       </div>
     </article>
   );

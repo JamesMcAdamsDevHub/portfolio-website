@@ -9,7 +9,7 @@ export default function SkillsCard() {
         <h2 className="text-xl font-bold lg:text-2xl">Skills</h2>
       </header>
 
-      <div className="mt-4 space-y-2">
+      <div className="mt-4">
         <div className="flex flex-wrap gap-2">
           <p className="font-bold">Languages:</p>
           <p>{skills.languages.join(" • ")}</p>

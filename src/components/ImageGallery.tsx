@@ -13,12 +13,15 @@ type ImageGalleryProps = {
 };
 
 export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
+  if (imageSrcList.length === 0) {
+    return null;
+  }
   const [mainImage, setSelectedToMain] = useState(0);
 
   return (
     <div className="flex flex-col items-center m-1">
       <Image
-        className="object-cover object-center"
+        className="object-cover object-center rounded-lg border-3 border-orange-700"
         src={imageSrcList[mainImage].src}
         alt={imageSrcList[mainImage].alt}
         width={600}
@@ -38,7 +41,13 @@ export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
               type="button"
               onClick={() => setSelectedToMain(idx)}
             >
-              <Image src={img.src} alt={img.alt} width={150} height={75} />
+              <Image
+                className="cursor-pointer rounded-lg border-3 border-orange-700"
+                src={img.src}
+                alt={img.alt}
+                width={150}
+                height={75}
+              />
             </button>
           );
         })}

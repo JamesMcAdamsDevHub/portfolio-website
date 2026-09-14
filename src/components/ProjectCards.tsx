@@ -13,7 +13,7 @@ export default function ProjectCards({ featuredOnly }: ProjectCardsProps) {
   return (
     <div className="flex w-full flex-col gap-6">
       {projectsToShow.map((project) => (
-        <ProjectCard key={project.slug} project={project} />
+        <ProjectCard key={project.title} project={project} />
       ))}
     </div>
   );
