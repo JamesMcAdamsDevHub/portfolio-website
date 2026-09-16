@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="w-full rounded-lg border-3 border-orange-700 bg-orange-100/50 px-5 py-4 shadow-lg">
       <div>
-        <header className="flex justify-between border-b-2 border-orange-700 pb-1">
+        <header className="md:flex md:justify-between border-b-2 border-orange-700 pb-1">
           <h2 className="text-xl font-bold lg:text-2xl">
             {project.title}
 
@@ -33,7 +33,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             )}
           </h2>
 
-          <p className="font-bold">{project.startDate}</p>
+          <p className="text-xs md:text-base font-bold">{project.startDate}</p>
         </header>
 
         <div className="mt-4 grid gap-6 lg:grid-cols-2">
@@ -42,7 +42,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <ImageGallery imageSrcList={project.media} />
         </div>
       </div>
-      <div className="flex px-2 gap-2 text-md">
+      <div className="md:flex px-2 gap-2 text-md">
         <p className="font-bold">Uses:</p>
         {project.technologies.join(" • ")}
       </div>

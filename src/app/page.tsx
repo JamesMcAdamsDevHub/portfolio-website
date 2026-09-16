@@ -29,7 +29,7 @@ export default function Home() {
         </div>
 
         <div className="flex-1">
-          <div className="flex flex-col items-center gap-2 border-b-3 border-orange-700 pb-2 md:flex-row md:justify-start md:gap-4">
+          <div className="flex flex-col items-center gap-2 border-b-3 border-orange-700 p-2 md:flex-row md:justify-start md:gap-4">
             <h1 className="text-center text-4xl font-bold">{about.name}</h1>
 
             <div className="flex gap-2">
@@ -39,7 +39,7 @@ export default function Home() {
             </div>
           </div>
 
-          <p className="mt-4">{about.introduction}</p>
+          <p className="m-4">{about.introduction}</p>
         </div>
       </section>
 

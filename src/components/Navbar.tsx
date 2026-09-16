@@ -12,7 +12,7 @@ export default function Navbar() {
         Portfolio Site | James McAdams
       </p>
 
-      <nav className="flex w-full md:w-auto justify-center text-sm lg:text-lg">
+      <nav className="flex w-full md:w-auto justify-center text-2xl md:text-lg">
         <Link
           href="/"
           className={

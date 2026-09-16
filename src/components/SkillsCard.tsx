@@ -10,17 +10,17 @@ export default function SkillsCard() {
       </header>
 
       <div className="mt-4">
-        <div className="flex flex-wrap gap-2">
+        <div className="md:flex md:flex-wrap md:gap-2">
           <p className="font-bold">Languages:</p>
           <p>{skills.languages.join(" • ")}</p>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="md:flex md:flex-wrap md:gap-2">
           <p className="font-bold">Technologies:</p>
           <p>{skills.technologies.join(" • ")}</p>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="md:flex md:flex-wrap md:gap-2">
           <p className="font-bold">Concepts:</p>
           <p>{skills.concepts.join(" • ")}</p>
         </div>

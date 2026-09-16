@@ -14,7 +14,7 @@ export default function ProjectCard({ experience }: ExperienceCardProps) {
   return (
     <article className="w-full rounded-lg border-3 border-orange-700 bg-orange-100/50 px-5 py-4 shadow-lg">
       <div>
-        <header className="flex justify-between border-b-2 border-orange-700 pb-1">
+        <header className="md:flex md:justify-between border-b-2 border-orange-700 pb-1">
           <div>
             <h2 className="text-xl font-bold lg:text-2xl">
               {experience.company}
@@ -22,7 +22,7 @@ export default function ProjectCard({ experience }: ExperienceCardProps) {
             <h2 className="text-xl">{experience.title}</h2>
           </div>
 
-          <div className="text-right font-bold">
+          <div className="text-xs md:text-base md:text-right font-bold">
             <p>
               {experience.startDate} -{" "}
               {experience.endDate === null ? "present" : experience.endDate}
