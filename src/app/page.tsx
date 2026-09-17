@@ -29,10 +29,12 @@ export default function Home() {
         </div>
 
         <div className="flex-1">
-          <div className="flex flex-col items-center gap-2 border-b-3 border-orange-700 p-2 md:flex-row md:justify-start md:gap-4">
-            <h1 className="text-center text-4xl font-bold">{about.name}</h1>
+          <div className="flex flex-col items-center gap-2 border-b-3 border-orange-700 md:flex-row md:justify-start">
+            <h1 className="whitespace-nowrap text-center text-3xl font-bold lg:text-4xl">
+              {about.name}
+            </h1>
 
-            <div className="flex gap-2">
+            <div className="flex gap-1 pb-2 md:pb-0">
               <Social platform="linkedin" />
               <Social platform="github" />
               <Social platform="instagram" />

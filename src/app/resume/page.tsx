@@ -12,10 +12,9 @@ export default function Home() {
           <h2 className="py-2 text-4xl font-bold">Resume</h2>
         </div>
 
-        <div className="font-bold text-center pt-2 mt-2">
-          <p className="text-2xl">{resume.name}</p>
-          <p className="text-lg">{resume.location}</p>
-          <p className="text-lg">{resume.email}</p>
+        <div className="font-bold text-center">
+          <p className="text-2xl pb-2">{resume.name}</p>
+          <p className="text-lg pb-2">{resume.email}</p>
 
           <div className="flex justify-center gap-2 py-2">
             <Social platform="linkedin" />

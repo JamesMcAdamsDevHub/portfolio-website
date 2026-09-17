@@ -14,8 +14,9 @@ type ImageGalleryProps = {
 
 export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
   const [mainImage, setSelectedToMain] = useState(0);
+  const imageCount = imageSrcList.length;
 
-  if (imageSrcList.length === 0) {
+  if (imageCount === 0) {
     return null;
   }
 
@@ -31,7 +32,7 @@ export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
         unoptimized
       />
 
-      {imageSrcList.length > 1 && (
+      {imageCount > 1 && (
         <div className="flex flex-wrap justify-center gap-2 py-2">
           {imageSrcList.map((img, idx) => {
             return (
@@ -41,7 +42,7 @@ export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
                 onClick={() => setSelectedToMain(idx)}
               >
                 <Image
-                  className="cursor-pointer rounded-lg border-3 border-orange-700"
+                  className="w-20 sm:w-28 md:w-36 h-auto cursor-pointer rounded-lg border-3 border-orange-700"
                   src={img.src}
                   alt={img.alt}
                   width={150}
