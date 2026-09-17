@@ -1,6 +1,7 @@
 import ExperienceCards from "@/components/ExperienceCards";
 import SkillsCard from "@/components/SkillsCard";
 import EducationCard from "@/components/EducationCard";
+import Social from "@/components/Social";
 import resume from "@/content/resume.json";
 
 export default function Home() {
@@ -11,13 +12,29 @@ export default function Home() {
           <h2 className="py-2 text-4xl font-bold">Resume</h2>
         </div>
 
-        <div className="font-bold text-center py-2 m-2">
+        <div className="font-bold text-center pt-2 mt-2">
           <p className="text-2xl">{resume.name}</p>
           <p className="text-lg">{resume.location}</p>
           <p className="text-lg">{resume.email}</p>
+
+          <div className="flex justify-center gap-2 py-2">
+            <Social platform="linkedin" />
+            <Social platform="github" />
+            <Social platform="instagram" />
+          </div>
         </div>
 
-        <hr className="mx-auto max-w-sm m-6 border-t-3 border-orange-700" />
+        <div className="text-center text-sm font-bold my-2">
+          <a
+            href="/documents/James-McAdams-Resume.pdf"
+            download
+            className="hover:text-blue-600"
+          >
+            Download Resume (PDF)
+          </a>
+        </div>
+
+        <hr className="mx-auto max-w-sm mb-6 border-t-3 border-orange-700" />
 
         <SkillsCard />
 

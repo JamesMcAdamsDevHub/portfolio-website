@@ -13,10 +13,11 @@ type ImageGalleryProps = {
 };
 
 export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
+  const [mainImage, setSelectedToMain] = useState(0);
+
   if (imageSrcList.length === 0) {
     return null;
   }
-  const [mainImage, setSelectedToMain] = useState(0);
 
   return (
     <div className="flex flex-col items-center m-1">
@@ -27,31 +28,31 @@ export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
         width={600}
         height={250}
         loading="eager"
+        unoptimized
       />
 
-      <div className="grid grid-cols-4 gap-2 py-2">
-        {imageSrcList.map((img, idx) => {
-          if (idx === mainImage) {
-            return null;
-          }
-
-          return (
-            <button
-              key={`${img.src}-${idx}`}
-              type="button"
-              onClick={() => setSelectedToMain(idx)}
-            >
-              <Image
-                className="cursor-pointer rounded-lg border-3 border-orange-700"
-                src={img.src}
-                alt={img.alt}
-                width={150}
-                height={75}
-              />
-            </button>
-          );
-        })}
-      </div>
+      {imageSrcList.length > 1 && (
+        <div className="flex flex-wrap justify-center gap-2 py-2">
+          {imageSrcList.map((img, idx) => {
+            return (
+              <button
+                key={`${img.src}-${idx}`}
+                type="button"
+                onClick={() => setSelectedToMain(idx)}
+              >
+                <Image
+                  className="cursor-pointer rounded-lg border-3 border-orange-700"
+                  src={img.src}
+                  alt={img.alt}
+                  width={150}
+                  height={75}
+                  unoptimized
+                />
+              </button>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
