@@ -13,7 +13,7 @@ export default function ProjectCards({ featuredOnly }: ProjectCardsProps) {
 
   if (featuredOnly) {
     return (
-      <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
         {projectsToShow.map((project) => (
           <ProjectFeatureCard key={project.title} project={project} />
         ))}
@@ -22,7 +22,7 @@ export default function ProjectCards({ featuredOnly }: ProjectCardsProps) {
   }
 
   return (
-    <div className="flex w-full flex-col gap-6">
+    <div className="flex w-full flex-col gap-4">
       {projectsToShow.map((project) => (
         <ProjectCard key={project.title} project={project} />
       ))}

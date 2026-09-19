@@ -6,7 +6,7 @@ import resume from "@/content/resume.json";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center mx-auto max-w-5xl py-7">
+    <main className="flex flex-col items-center mx-auto max-w-5xl px-2 py-7">
       <section>
         <div className="mx-auto m-4 w-fit border-y-3 border-orange-700 text-center">
           <h2 className="py-2 text-4xl font-bold">Resume</h2>
