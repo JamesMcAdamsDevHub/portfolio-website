@@ -10,34 +10,31 @@ type ExperienceCardProps = {
   };
 };
 
-export default function ProjectCard({ experience }: ExperienceCardProps) {
+export default function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
-    <article className="w-full rounded-lg border-3 border-orange-700 bg-orange-100/50 px-5 py-4 shadow-lg">
-      <div>
-        <header className="md:flex md:justify-between border-b-2 border-orange-700 pb-1">
-          <div>
-            <h2 className="text-xl font-bold lg:text-2xl">
-              {experience.company}
-            </h2>
-            <h2 className="text-xl">{experience.title}</h2>
-          </div>
+    <article className="w-full rounded-lg border-3 border-orange-700 bg-orange-100/50 px-2 shadow-lg">
+      <header className="border-b-2 border-orange-700 pt-2 md:flex md:justify-between">
+        <div>
+          <h2 className="text-xl font-bold lg:text-2xl">
+            {experience.company}
+          </h2>
+          <p className="text-xl leading-tight">{experience.title}</p>
+        </div>
 
-          <div className="text-xs md:text-base md:text-right font-bold">
-            <p>
-              {experience.startDate} -{" "}
-              {experience.endDate === null ? "present" : experience.endDate}
-            </p>
-            <p>{experience.location}</p>
-          </div>
-        </header>
-      </div>
-      <div className="px-2 gap-2 text-md">
-        <ul className="mt-4 list-disc pl-6">
-          {experience.details.map((desc) => (
-            <li key={desc}>{desc}</li>
-          ))}
-        </ul>
-      </div>
+        <div className="text-xs font-bold leading-tight md:text-right md:text-base">
+          <p>
+            {experience.startDate} -{" "}
+            {experience.endDate === null ? "present" : experience.endDate}
+          </p>
+          <p>{experience.location}</p>
+        </div>
+      </header>
+
+      <ul className="mt-2 list-disc pl-6 py-2">
+        {experience.details.map((desc) => (
+          <li key={desc}>{desc}</li>
+        ))}
+      </ul>
     </article>
   );
 }

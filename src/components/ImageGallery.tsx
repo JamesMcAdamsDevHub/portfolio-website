@@ -47,6 +47,7 @@ export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
                   alt={img.alt}
                   width={150}
                   height={75}
+                  loading="eager"
                   unoptimized
                 />
               </button>

@@ -2,8 +2,15 @@
   {
     "title": "Portfolio Website",
     "repoLink": "https://github.com/JamesMcAdamsDevHub/portfolio-website",
+    "briefDescription": "Responsive portfolio website for showcasing my software projects, professional experience, and skills.",
     "description": "A responsive portfolio website built with Next.js, React, TypeScript, and Tailwind CSS to showcase my software projects, professional experience, and skills. The site uses reusable components and JSON-driven content to keep project and resume information separate from the presentation layer. Designed with responsive layouts and accessibility in mind, including keyboard navigation, semantic HTML, and support for varying screen sizes and zoom levels.",
-    "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    "languages": ["TypeScript"],
+    "technologies": ["Next.js", "React", "Tailwind CSS"],
+    "concepts": [
+      "Responsive Design",
+      "Component-Based Design",
+      "Accessibility"
+    ],
     "startDate": "September 2026",
     "media": [
       {
@@ -13,13 +20,16 @@
         "description": "Screenshot of Home page"
       }
     ],
-    "featured": false
+    "featured": true
   },
   {
-    "title": "Procedural Track Generation Tool - Unity",
+    "title": "Procedural Track Generation Tool",
     "repoLink": "https://github.com/JamesMcAdamsDevHub/Unity-CustomTrackGeneration",
+    "briefDescription": "Unity editor tool for creating customizable, game-ready 3D tracks.",
     "description": "A procedural track generation tool built in Unity that allows developers to create customizable, game-ready tracks by drawing and editing paths directly in the editor. The system uses spline sampling, vector-based mathematics, and procedural mesh generation to construct tracks with support for features such as curves, elevation changes, banking, intersections, sidewalks, and other configurable components. The goal is to provide the flexibility of a procedural system while keeping the workflow intuitive and easy to use.",
-    "technologies": ["Unity", "C#"],
+    "languages": ["C#"],
+    "technologies": ["Unity"],
+    "concepts": ["Procedural Generation", "Splines", "Mesh Generation"],
     "startDate": "February 2026",
     "media": [
       {

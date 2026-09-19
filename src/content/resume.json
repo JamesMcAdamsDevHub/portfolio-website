@@ -3,8 +3,15 @@
   "email": "james.mcadams.dev@gmail.com",
 
   "skills": {
-    "languages": ["C", "C#", "Java", "Python"],
-    "technologies": ["Unity", "Unreal Engine", "Git", "REST APIs"],
+    "languages": ["C", "C#", "Java", "Python", "TypeScript"],
+    "technologies": [
+      "Unity",
+      "Unreal Engine",
+      "Next.js",
+      "React",
+      "Git",
+      "REST APIs"
+    ],
     "concepts": [
       "Agile/Scrum",
       "Object-Oriented Design",
@@ -19,6 +26,7 @@
     "graduationDate": "May 2028",
     "gpa": "4.0"
   },
+
   "experience": [
     {
       "company": "Curriculum Associates",
@@ -27,40 +35,38 @@
       "startDate": "June 2026",
       "endDate": null,
       "details": [
-        "Develop and maintain production software for educational products using Unity, C#, and Java",
-        "Implement features and resolve defects across existing systems",
-        "Participate in code reviews, testing, and technical documentation",
-        "Built tooling to produce JSON datasets containing 10,000+ records for efficient caching and API consumption",
-        "Develop Java API endpoints to fetch and write simulated student data for product testing and demonstrations"
+        "Develop and maintain production educational software using Unity, C#, and Java",
+        "Implement features, resolve defects, and contribute to code reviews and testing",
+        "Built tooling to generate JSON datasets containing 10,000+ simulated student records",
+        "Develop Java API endpoints to read and write simulated student data for testing and demonstrations"
       ],
       "featured": true
     },
     {
       "company": "University of Central Florida",
       "location": "Orlando, FL",
-      "title": "Teaching Assistant - Intro to Object-Oriented Programming / Computer Science 1",
+      "title": "Teaching Assistant - Object-Oriented Programming / Computer Science 1",
       "startDate": "August 2025",
       "endDate": "May 2026",
       "details": [
-        "Supported 120+ students in Intro to Object-Oriented Programming and 400+ students in Computer Science 1",
-        "Routinely held office hours, worked individually with students, and graded exams and programming assignments",
-        "Led 2 weekly lab sessions for CS1 covering data structures, algorithms, and fundamental CS concepts",
-        "Evaluated and debugged student code to ensure correctness, efficiency, and code quality"
+        "Supported 120+ Object-Oriented Programming students and 400+ Computer Science 1 students",
+        "Led 2 weekly CS1 labs covering data structures, algorithms, and core programming concepts",
+        "Held office hours and provided individual programming support",
+        "Evaluated and debugged student code for correctness, efficiency, and code quality"
       ],
       "featured": false
     },
     {
       "company": "PepsiCo",
       "location": "Melbourne, FL",
-      "title": "Sales Representative/ Supply Chain Operations Associate Supervisor",
+      "title": "Sales Representative / Supply Chain Operations Associate Supervisor",
       "startDate": "July 2020",
       "endDate": "August 2023",
       "details": [
-        "Built and maintained strong relationships with 5 high-volume sales accounts",
-        "Ordered 2,000+ cases weekly, minimized out-of-stocks, and avoided unnecessary over-stock",
-        "Led warehouse operations overseeing pallet builds of up to 14,000 cases daily",
-        "Optimized workflow by organizing order fulfillment and improving operational efficiency",
-        "Tracked and verified incoming and outgoing inventory to maintain accuracy and reduce discrepancies"
+        "Managed 5 high-volume sales accounts and ordered 2,000+ cases weekly",
+        "Led warehouse operations supporting pallet builds of up to 14,000 cases daily",
+        "Coordinated order fulfillment and inventory flow to improve operational efficiency",
+        "Tracked incoming and outgoing inventory to maintain accuracy and reduce discrepancies"
       ],
       "featured": false
     },
@@ -71,9 +77,9 @@
       "startDate": "October 2017",
       "endDate": "July 2020",
       "details": [
-        "Oversaw daily operations and supervised 50+ employees across store functions",
-        "Managed inventory levels, ordered 1,000+ cases weekly, and maintained thousands of SKUs storewide",
-        "Coordinated with vendors to ensure consistent operations and customer experience"
+        "Oversaw daily store operations and supervised 50+ employees",
+        "Managed thousands of SKUs and ordered 1,000+ cases weekly",
+        "Coordinated with vendors to maintain inventory and store operations"
       ],
       "featured": false
     }
