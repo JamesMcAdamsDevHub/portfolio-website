@@ -33,15 +33,15 @@ export default function Home() {
           </a>
         </div>
 
-        <hr className="mx-auto max-w-sm mb-6 border-t-3 border-orange-700" />
+        <hr className="mx-auto max-w-xs mb-6 border-t-3 border-orange-700" />
 
         <SkillsCard />
 
-        <hr className="mx-auto max-w-sm m-6 border-t-3 border-orange-700" />
+        <hr className="mx-auto max-w-xs m-6 border-t-3 border-orange-700" />
 
         <EducationCard />
 
-        <hr className="mx-auto max-w-sm m-6 border-t-3 border-orange-700" />
+        <hr className="mx-auto max-w-xs m-6 border-t-3 border-orange-700" />
 
         <ExperienceCards featuredOnly={false} />
       </section>
