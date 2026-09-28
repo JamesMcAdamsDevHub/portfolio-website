@@ -4,7 +4,7 @@ import about from "@/content/about.json";
 
 export default function AboutCard() {
   return (
-    <article className="flex w-full flex-col items-center gap-2 rounded-lg border-3 border-orange-700 bg-orange-100/50 p-2 shadow-lg md:flex-row md:items-start">
+    <article className="flex w-full flex-col items-center gap-2 bg-transparent p-2 md:flex-row md:items-start">
       <Image
         src={about.profileImage}
         alt={about.profileImageAlt}
@@ -22,7 +22,7 @@ export default function AboutCard() {
       />
 
       <div className="flex-1">
-        <div className="flex flex-col items-center gap-2 border-b-3 border-orange-700 pl-2 md:flex-row md:justify-start">
+        <div className="flex flex-col items-center gap-2 border-b-2 border-orange-700 pl-2 md:flex-row md:justify-start">
           <h1 className="whitespace-nowrap text-center text-3xl font-bold lg:text-4xl">
             {about.name}
           </h1>
@@ -34,7 +34,7 @@ export default function AboutCard() {
           </div>
         </div>
 
-        <p className="m-4 text-lg">{about.introduction}</p>
+        <p className="m-4 leading-relaxed">{about.introduction}</p>
       </div>
     </article>
   );

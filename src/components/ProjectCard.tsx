@@ -19,7 +19,7 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="w-full rounded-lg border-3 border-orange-700 bg-orange-100/50 px-5 py-4 shadow-lg">
+    <article className="w-full bg-transparent py-1">
       <header className="border-b-2 border-orange-700 pb-1 md:flex md:justify-between">
         <h2 className="text-xl font-bold lg:text-2xl">
           {project.title}
@@ -37,11 +37,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <p className="text-xs font-bold md:text-base">{project.startDate}</p>
       </header>
 
-      <div className="mt-4 grid gap-6 lg:grid-cols-2">
+      <div className="mt-2 grid items-start gap-6 lg:grid-cols-[3fr_2fr]">
         <div>
           <p>{project.description}</p>
 
-          <div className="mt-4">
+          <div className="mt-3">
             <p className="py-1">
               <span className="font-bold">Languages:</span>{" "}
               {project.languages.join(" • ")}

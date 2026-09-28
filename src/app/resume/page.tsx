@@ -6,45 +6,54 @@ import resume from "@/content/resume.json";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center mx-auto max-w-5xl px-2 py-7">
-      <section>
-        <div className="mx-auto m-4 w-fit border-y-3 border-orange-700 text-center">
-          <h2 className="py-2 text-4xl font-bold">Resume</h2>
+    <main className="mx-auto w-full px-2 pt-2 lg:px-30">
+      <header className="text-center">
+        <h2 className="w-fit mx-auto pl-2 mb-1 border-b-3 border-orange-700 text-orange-900 text-2xl font-bold text-center">
+          RESUME
+        </h2>
+
+        <div className="mt-2">
+          <p className="text-xl font-bold">{resume.name}</p>
+          <p className="mt-1">{resume.email}</p>
         </div>
 
-        <div className="font-bold text-center">
-          <p className="text-2xl pb-2">{resume.name}</p>
-          <p className="text-lg pb-2">{resume.email}</p>
-
-          <div className="flex justify-center gap-2 py-2">
+        <div className="mt-3 flex flex-col items-center gap-2">
+          <div className="flex gap-2">
             <Social platform="linkedin" />
             <Social platform="github" />
             <Social platform="instagram" />
           </div>
-        </div>
 
-        <div className="text-center text-sm font-bold my-2">
           <a
             href="/documents/James-McAdams-Resume.pdf"
             download
-            className="hover:text-blue-600"
+            className="font-bold text-orange-900 hover:text-blue-600"
           >
             Download Resume (PDF)
           </a>
         </div>
+      </header>
 
-        <hr className="mx-auto max-w-xs mb-6 border-t-3 border-orange-700" />
+      <div className="mt-2 grid grid-cols-1 gap-4 2xl:grid-cols-[3fr_10fr]">
+        <section className="mb-1">
+          <h2 className="mb-1 border-b-3 border-orange-700 py-2 pl-2 text-center text-xl font-bold text-orange-900 2xl:text-left">
+            SKILLS & EDUCATION
+          </h2>
 
-        <SkillsCard />
+          <div className="flex flex-col gap-4">
+            <SkillsCard />
+            <EducationCard />
+          </div>
+        </section>
 
-        <hr className="mx-auto max-w-xs m-6 border-t-3 border-orange-700" />
+        <section>
+          <h2 className="mb-1 border-b-3 border-orange-700 py-2 pl-2 text-center text-xl font-bold text-orange-900 2xl:text-left">
+            EXPERIENCE
+          </h2>
 
-        <EducationCard />
-
-        <hr className="mx-auto max-w-xs m-6 border-t-3 border-orange-700" />
-
-        <ExperienceCards featuredOnly={false} />
-      </section>
+          <ExperienceCards featuredOnly={false} />
+        </section>
+      </div>
     </main>
   );
 }

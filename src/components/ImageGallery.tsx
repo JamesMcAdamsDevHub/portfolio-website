@@ -21,9 +21,9 @@ export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
   }
 
   return (
-    <div className="flex flex-col items-center m-1">
+    <div className="m-1 flex flex-col items-center">
       <Image
-        className="object-cover object-center rounded-lg border-3 border-orange-700"
+        className="rounded-lg border-3 border-orange-700 object-cover object-center"
         src={imageSrcList[mainImage].src}
         alt={imageSrcList[mainImage].alt}
         width={600}
@@ -33,26 +33,31 @@ export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
       />
 
       {imageCount > 1 && (
-        <div className="flex flex-wrap justify-center gap-2 py-2">
-          {imageSrcList.map((img, idx) => {
-            return (
-              <button
-                key={`${img.src}-${idx}`}
-                type="button"
-                onClick={() => setSelectedToMain(idx)}
-              >
-                <Image
-                  className="w-20 sm:w-28 md:w-36 h-auto cursor-pointer rounded-lg border-3 border-orange-700"
-                  src={img.src}
-                  alt={img.alt}
-                  width={150}
-                  height={75}
-                  loading="eager"
-                  unoptimized
-                />
-              </button>
-            );
-          })}
+        <div className="mt-2 flex w-full flex-wrap justify-center gap-2">
+          {imageSrcList.map((img, idx) => (
+            <button
+              key={`${img.src}-${idx}`}
+              type="button"
+              onClick={() => setSelectedToMain(idx)}
+              className={`cursor-pointer rounded transition ${
+                mainImage === idx
+                  ? "border-2 border-orange-700 opacity-100"
+                  : "border-2 border-transparent opacity-75 hover:opacity-100"
+              }`}
+              aria-label={`Show ${img.alt}`}
+              aria-pressed={mainImage === idx}
+            >
+              <Image
+                className="h-16 w-28 rounded object-cover"
+                src={img.src}
+                alt={img.alt}
+                width={150}
+                height={75}
+                loading="eager"
+                unoptimized
+              />
+            </button>
+          ))}
         </div>
       )}
     </div>

@@ -20,7 +20,7 @@ export default function ProjectFeatureCard({
   project,
 }: ProjectFeatureCardProps) {
   return (
-    <article className="flex w-full flex-col rounded-lg border-3 border-orange-700 bg-orange-100/50 p-4 shadow-lg">
+    <article className="flex h-full w-full flex-col bg-transparent px-5 py-4">
       <header className="mb-2 border-b-2 border-orange-700">
         <h2 className="text-lg font-bold">
           {project.title}
@@ -28,7 +28,7 @@ export default function ProjectFeatureCard({
           {project.repoLink !== null && (
             <Link
               href={project.repoLink}
-              className="ml-2 text-sm font-normal hover:text-blue-600"
+              className="ml-2 text-xs font-normal text-black/70 hover:text-blue-600"
             >
               GitHub ↗
             </Link>
@@ -45,21 +45,21 @@ export default function ProjectFeatureCard({
         loading="eager"
       />
 
-      <p className="mt-4 text-lg">{project.briefDescription}</p>
+      <p className="mt-3">{project.briefDescription}</p>
 
-      <div className="mt-auto space-y-1 pt-2 text-md">
+      <div className="mt-auto space-y-0.5 pt-3 text-sm text-black/75">
         <p>
-          <span className="font-bold">Languages:</span>{" "}
+          <span className="font-semibold text-black">Languages:</span>{" "}
           {project.languages.join(" • ")}
         </p>
 
         <p>
-          <span className="font-bold">Technologies:</span>{" "}
+          <span className="font-semibold text-black">Technologies:</span>{" "}
           {project.technologies.join(" • ")}
         </p>
 
         <p>
-          <span className="font-bold">Concepts:</span>{" "}
+          <span className="font-semibold text-black">Concepts:</span>{" "}
           {project.concepts.join(" • ")}
         </p>
       </div>

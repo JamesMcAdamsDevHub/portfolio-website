@@ -17,3 +17,47 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.site-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #c2410c transparent;
+}
+
+.site-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.site-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.site-scrollbar::-webkit-scrollbar-thumb {
+  background: #c2410c;
+  border-radius: 4px;
+}
+
+.site-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #9a3412;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #c2410c transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #c2410c;
+  border-radius: 4px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #9a3412;
+}

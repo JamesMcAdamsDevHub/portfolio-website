@@ -22,7 +22,7 @@ export default function ProjectCards({ featuredOnly }: ProjectCardsProps) {
   }
 
   return (
-    <div className="flex w-full flex-col gap-4">
+    <div className="site-scrollbar flex w-full flex-col gap-2 2xl:max-h-200 2xl:overflow-y-auto 2xl:pr-2">
       {projectsToShow.map((project) => (
         <ProjectCard key={project.title} project={project} />
       ))}

@@ -13,7 +13,7 @@ export default function ExperienceCards({
     : resume.experience;
 
   return (
-    <div className="flex w-full flex-col gap-6">
+    <div className="site-scrollbar flex w-full flex-col gap-6 2xl:max-h-140 2xl:overflow-y-auto 2xl:pr-2">
       {experienceToShow.map((experience) => (
         <ExperienceCard
           key={`${experience.title}-${experience.startDate}`}
