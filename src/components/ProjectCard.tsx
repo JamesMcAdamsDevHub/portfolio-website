@@ -44,17 +44,38 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <div className="mt-3">
             <p className="py-1">
               <span className="font-bold">Languages:</span>{" "}
-              {project.languages.join(" • ")}
+              {project.languages.map((language, index) => (
+                <span key={language}>
+                  {language}
+                  {index < project.languages.length - 1 && (
+                    <span aria-hidden="true"> • </span>
+                  )}
+                </span>
+              ))}
             </p>
 
             <p className="py-1">
               <span className="font-bold">Technologies:</span>{" "}
-              {project.technologies.join(" • ")}
+              {project.technologies.map((technology, index) => (
+                <span key={technology}>
+                  {technology}
+                  {index < project.technologies.length - 1 && (
+                    <span aria-hidden="true"> • </span>
+                  )}
+                </span>
+              ))}
             </p>
 
             <p className="py-1">
               <span className="font-bold">Concepts:</span>{" "}
-              {project.concepts.join(" • ")}
+              {project.concepts.map((concept, index) => (
+                <span key={concept}>
+                  {concept}
+                  {index < project.concepts.length - 1 && (
+                    <span aria-hidden="true"> • </span>
+                  )}
+                </span>
+              ))}
             </p>
           </div>
         </div>

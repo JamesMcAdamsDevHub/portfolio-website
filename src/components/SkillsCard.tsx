@@ -12,17 +12,44 @@ export default function SkillsCard() {
       <div className="space-y-1 pt-2 text-sm">
         <div>
           <p className="font-semibold">Languages:</p>
-          <p className="text-black/75">{skills.languages.join(" • ")}</p>
+          <p className="text-black/75">
+            {skills.languages.map((skill, index) => (
+              <span key={skill}>
+                {skill}
+                {index < skills.languages.length - 1 && (
+                  <span aria-hidden="true"> • </span>
+                )}
+              </span>
+            ))}
+          </p>
         </div>
 
         <div>
           <p className="font-semibold">Technologies:</p>
-          <p className="text-black/75">{skills.technologies.join(" • ")}</p>
+          <p className="text-black/75">
+            {skills.technologies.map((skill, index) => (
+              <span key={skill}>
+                {skill}
+                {index < skills.technologies.length - 1 && (
+                  <span aria-hidden="true"> • </span>
+                )}
+              </span>
+            ))}
+          </p>
         </div>
 
         <div>
           <p className="font-semibold">Concepts:</p>
-          <p className="text-black/75">{skills.concepts.join(" • ")}</p>
+          <p className="text-black/75">
+            {skills.concepts.map((skill, index) => (
+              <span key={skill}>
+                {skill}
+                {index < skills.concepts.length - 1 && (
+                  <span aria-hidden="true"> • </span>
+                )}
+              </span>
+            ))}
+          </p>
         </div>
       </div>
     </article>

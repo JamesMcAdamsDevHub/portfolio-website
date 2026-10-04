@@ -9,8 +9,10 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full flex items-stretch justify-between border-b border-orange-700 bg-linear-to-br from-orange-600 to-amber-600">
-      <p className="hidden md:block text-2xl lg:text-bold p-1 pl-6 gap-2">
-        Portfolio Site | James McAdams
+      <p className="hidden md:block text-2xl lg:text-bold p-1 pl-6">
+        Portfolio Site
+        <span aria-hidden="true"> | </span>
+        James McAdams
       </p>
 
       <nav className="flex w-full md:w-auto justify-center text-2xl md:text-lg">
