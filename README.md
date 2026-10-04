@@ -38,7 +38,7 @@ The Resume page must include:
 - [x] Education
 - [x] Skills
 - [x] Resume content loaded from a centralized resume.json file
-- [ ] Downloadable PDF version of my resume
+- [x] Downloadable PDF version of my resume
 
 ### Support browser-playable projects
 
@@ -66,15 +66,15 @@ The website must:
 
 - [x] Store project information in a centralized JSON file
 - [x] Allow a project to be added primarily by adding its data and media
-- [ ] Avoid project-specific pages and components when reusable solutions are appropriate
+- [x] Avoid project-specific pages and components when reusable solutions are appropriate
 - [ ] Support optional project information such as repository links, playable demos, and featured status
 
 ### Deploy the website
 
 The finished website must:
 
-- [ ] Be statically exported with Next.js
-- [ ] Be automatically deployed through GitHub Actions
-- [ ] Be hosted with GitHub Pages
-- [ ] Be available at jamesmcadams.dev
-- [ ] Use HTTPS
+- ~~[ ] Be statically exported with Next.js~~
+- ~~[ ] Be automatically deployed through GitHub Actions~~
+- [x] Be hosted with ~~GitHub Pages~~ Vercel
+- [x] Be available at jamesmcadams.dev
+- [x] Use HTTPS

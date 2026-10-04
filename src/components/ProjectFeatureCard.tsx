@@ -30,7 +30,7 @@ export default function ProjectFeatureCard({
               href={project.repoLink}
               className="ml-2 text-xs font-normal text-black/70 hover:text-blue-600"
             >
-              GitHub ↗
+              GitHub <span aria-hidden="true">↗</span>
             </Link>
           )}
         </h2>
@@ -50,17 +50,38 @@ export default function ProjectFeatureCard({
       <div className="mt-auto space-y-0.5 pt-3 text-sm text-black/75">
         <p>
           <span className="font-semibold text-black">Languages:</span>{" "}
-          {project.languages.join(" • ")}
+          {project.languages.map((language, index) => (
+            <span key={language}>
+              {language}
+              {index < project.languages.length - 1 && (
+                <span aria-hidden="true"> • </span>
+              )}
+            </span>
+          ))}
         </p>
 
         <p>
           <span className="font-semibold text-black">Technologies:</span>{" "}
-          {project.technologies.join(" • ")}
+          {project.technologies.map((technology, index) => (
+            <span key={technology}>
+              {technology}
+              {index < project.technologies.length - 1 && (
+                <span aria-hidden="true"> • </span>
+              )}
+            </span>
+          ))}
         </p>
 
         <p>
           <span className="font-semibold text-black">Concepts:</span>{" "}
-          {project.concepts.join(" • ")}
+          {project.concepts.map((concept, index) => (
+            <span key={concept}>
+              {concept}
+              {index < project.concepts.length - 1 && (
+                <span aria-hidden="true"> • </span>
+              )}
+            </span>
+          ))}
         </p>
       </div>
     </article>

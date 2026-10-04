@@ -29,7 +29,7 @@ export default function Home() {
               href="/projects"
               className="font-bold text-orange-900 hover:text-blue-600"
             >
-              View All Projects →
+              View All Projects <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
@@ -38,6 +38,7 @@ export default function Home() {
           <h2 className="pl-2 mb-1 border-b-3 border-orange-700 text-orange-900 text-xl font-bold text-center md:text-left">
             EXPERIENCE
           </h2>
+
           <div className="flex flex-1 flex-col justify-between">
             <SkillsCard />
             <EducationCard />
@@ -49,7 +50,7 @@ export default function Home() {
               href="/resume"
               className="font-bold text-orange-900 hover:text-blue-600"
             >
-              View Full Resume →
+              View Full Resume <span aria-hidden="true">→</span>
             </Link>
           </div>
         </section>
