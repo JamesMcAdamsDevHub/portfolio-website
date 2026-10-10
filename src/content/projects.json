@@ -1,5 +1,30 @@
 [
   {
+    "title": "Minesweeper",
+    "repoLink": "https://github.com/JamesMcAdamsDevHub/MinesweeperWebGL",
+    "playLink": "/games/minesweeper",
+    "briefDescription": "A browser-playable Minesweeper game built in Unity with three difficulty levels.",
+    "description": "A Minesweeper game developed in Unity and C#, playable directly in the browser through WebGL. Features three difficulty levels, randomized mine placement, first-click protection, breadth-first flood fill, and responsive UI layouts. The game uses a state-driven architecture to manage gameplay, tile interactions, and win/loss conditions.",
+    "languages": ["C#"],
+    "technologies": ["Unity", "WebGL"],
+    "concepts": [
+      "Game Development",
+      "Breadth-First Search",
+      "State Management",
+      "Responsive UI"
+    ],
+    "startDate": "October 2026",
+    "media": [
+      {
+        "type": "game",
+        "src": "/images/projects/minesweeper/minesweeper-screenshot.png",
+        "alt": "Playable Minesweeper game",
+        "description": "Play Minesweeper directly in your browser"
+      }
+    ],
+    "featured": true
+  },
+  {
     "title": "Portfolio Website",
     "repoLink": "https://github.com/JamesMcAdamsDevHub/portfolio-website",
     "briefDescription": "Responsive portfolio website for showcasing my software projects, professional experience, and skills.",
@@ -20,7 +45,7 @@
         "description": "Screenshot of Home page"
       }
     ],
-    "featured": true
+    "featured": false
   },
   {
     "title": "Procedural Track Generation Tool",

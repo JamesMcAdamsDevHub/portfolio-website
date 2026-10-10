@@ -4,7 +4,8 @@ import ImageGallery from "@/components/ImageGallery";
 type ProjectCardProps = {
   project: {
     title: string;
-    repoLink: string | null;
+    repoLink?: string;
+    playLink?: string;
     description: string;
     languages: string[];
     technologies: string[];
@@ -24,12 +25,21 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <h2 className="text-xl font-bold lg:text-2xl">
           {project.title}
 
-          {project.repoLink !== null && (
+          {project.playLink && (
+            <Link
+              href={project.playLink}
+              className="ml-2 p-2 text-xs text-white font-bold bg-orange-700 rounded-md hover:bg-orange-800"
+            >
+              <span aria-hidden="true">▶ </span> Play Game
+            </Link>
+          )}
+
+          {project.repoLink && (
             <Link
               href={project.repoLink}
-              className="ml-2 text-sm font-normal hover:text-blue-600"
+              className="ml-2 text-xs font-normal text-black/70 hover:text-blue-600"
             >
-              GitHub ↗
+              GitHub <span aria-hidden="true">↗</span>
             </Link>
           )}
         </h2>

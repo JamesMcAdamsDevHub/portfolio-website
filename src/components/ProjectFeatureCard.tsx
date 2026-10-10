@@ -4,7 +4,8 @@ import Image from "next/image";
 type ProjectFeatureCardProps = {
   project: {
     title: string;
-    repoLink: string | null;
+    repoLink?: string;
+    playLink?: string;
     briefDescription: string;
     languages: string[];
     technologies: string[];
@@ -25,7 +26,7 @@ export default function ProjectFeatureCard({
         <h2 className="text-lg font-bold">
           {project.title}
 
-          {project.repoLink !== null && (
+          {project.repoLink && (
             <Link
               href={project.repoLink}
               className="ml-2 text-xs font-normal text-black/70 hover:text-blue-600"
@@ -36,14 +37,28 @@ export default function ProjectFeatureCard({
         </h2>
       </header>
 
-      <Image
-        className="mx-auto aspect-[14/9] w-3/4 rounded-lg border-3 border-orange-700 object-cover"
-        src={project.media[0].src}
-        alt={project.media[0].alt}
-        width={600}
-        height={300}
-        loading="eager"
-      />
+      <div className="relative mx-auto w-3/4">
+        <Image
+          className="aspect-[14/9] rounded-lg border-3 border-orange-700 object-cover object-center"
+          src={project.media[0].src}
+          alt={project.media[0].alt}
+          width={600}
+          height={300}
+          loading="eager"
+        />
+
+        {project.playLink && (
+          <Link
+            href={project.playLink}
+            className="absolute inset-0 flex items-center justify-center rounded-lg hover:bg-black/20"
+            aria-label={`Play ${project.title}`}
+          >
+            <span className="rounded-lg bg-orange-700/80 px-5 py-3 text-lg font-bold text-white hover:bg-orange-800/90">
+              <span aria-hidden="true">▶ </span> Play Game
+            </span>
+          </Link>
+        )}
+      </div>
 
       <p className="mt-3">{project.briefDescription}</p>
 
