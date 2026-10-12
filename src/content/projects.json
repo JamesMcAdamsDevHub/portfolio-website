@@ -17,7 +17,7 @@
     "media": [
       {
         "type": "game",
-        "src": "/images/projects/minesweeper/minesweeper-screenshot.png",
+        "src": "/images/projects/minesweeper/screenshot-minesweeper.png",
         "alt": "Playable Minesweeper game",
         "description": "Play Minesweeper directly in your browser"
       }

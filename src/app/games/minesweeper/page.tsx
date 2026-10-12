@@ -1,8 +1,8 @@
 export default function Home() {
   return (
-    <main className="py-12">
+    <main className="mx-auto max-w-7xl py-12 max-lg:landscape:py-2">
       <section>
-        <div className="mx-auto aspect-square w-full max-w-2xl overflow-hidden rounded-4xl bg-orange-700 border-4 border-orange-700">
+        <div className="mx-auto aspect-[9/10] w-full max-w-xl landscape:max-w-[70dvh] overflow-hidden rounded-lg border-3 border-orange-700">
           <iframe
             src="/games/minesweeper/index.html"
             title="Play Minesweeper"
