@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "James McAdams | Software Developer",
+  title: "James McAdams Software Developer",
   description:
     "Portfolio of James McAdams, featuring software development, game development, and programming projects.",
 };

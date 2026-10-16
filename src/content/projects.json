@@ -4,21 +4,21 @@
     "repoLink": "https://github.com/JamesMcAdamsDevHub/MinesweeperWebGL",
     "playLink": "/games/minesweeper",
     "briefDescription": "A browser-playable Minesweeper game built in Unity with three difficulty levels.",
-    "description": "A Minesweeper game developed in Unity and C#, playable directly in the browser through WebGL. Features three difficulty levels, randomized mine placement, first-click protection, breadth-first flood fill, and responsive UI layouts. The game uses a state-driven architecture to manage gameplay, tile interactions, and win/loss conditions.",
+    "description": "A Minesweeper game developed in Unity and C#, playable directly in desktop and mobile browsers through WebGL. Features three difficulty levels, randomized mine placement, first-click protection, breadth-first flood fill, and flagging mechanics. The game uses a state-driven architecture to manage gameplay, tile interactions, and win/loss conditions.",
     "languages": ["C#"],
     "technologies": ["Unity", "WebGL"],
     "concepts": [
       "Game Development",
       "Breadth-First Search",
       "State Management",
-      "Responsive UI"
+      "UI Design"
     ],
     "startDate": "October 2026",
     "media": [
       {
         "type": "game",
         "src": "/images/projects/minesweeper/screenshot-minesweeper.png",
-        "alt": "Playable Minesweeper game",
+        "alt": "Screenshot of Minesweeper gameplay",
         "description": "Play Minesweeper directly in your browser"
       }
     ],

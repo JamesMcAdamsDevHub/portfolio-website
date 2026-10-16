@@ -6,8 +6,6 @@ A website to showcase my personal projects and resume for the purpose of providi
 
 ## Objectives
 
-> **Note:** This project is currently a work in progress. Objectives will be checked off as they are completed or marked if they are intentionally removed from scope.
-
 ### Create a strong landing page
 
 The landing page (Home) must include:
@@ -23,10 +21,10 @@ The Projects page must include:
 
 - [x] A list of projects generated from project data
 - [x] Project cards containing relevant project information
-- [ ] Project media, including images and videos
+- [x] Project images
 - ~~[ ] Links to individual project detail pages~~
 - [x] Repository links when available
-- [ ] Play links for browser-playable projects when available
+- [x] Play links for browser-playable projects when available
 - ~~[ ] Project detail pages generated from centralized project data~~
 
 ### Create a data-driven Resume page
@@ -44,10 +42,10 @@ The Resume page must include:
 
 Projects with a browser-playable version must include:
 
-- [ ] A Play option from the associated project
-- [ ] A reusable Play page
-- [ ] Support for embedding Unity Web builds
-- [ ] Navigation back to the associated project
+- [x] A Play option from the associated project
+- [x] A Play page
+- [x] Support for embedding Unity Web builds
+- [ ] ~~Navigation back to the associated project~~
 
 ### Create a responsive and accessible user interface
 
@@ -55,10 +53,10 @@ The website must include:
 
 - [x] Responsive layouts for desktop and mobile devices
 - [x] Clear and consistent navigation
-- [ ] Semantic HTML where appropriate
-- [ ] Keyboard-accessible interactive elements
+- [x] Semantic HTML where appropriate
+- [x] Keyboard-accessible interactive elements
 - [x] Appropriate alternative text for informative images
-- [ ] Consistent styling throughout the website
+- [x] Consistent styling throughout the website
 
 ### Create an easily maintainable project system
 
@@ -67,7 +65,7 @@ The website must:
 - [x] Store project information in a centralized JSON file
 - [x] Allow a project to be added primarily by adding its data and media
 - [x] Avoid project-specific pages and components when reusable solutions are appropriate
-- [ ] Support optional project information such as repository links, playable demos, and featured status
+- [x] Support optional project information such as repository links, playable demos, and featured status
 
 ### Deploy the website
 
