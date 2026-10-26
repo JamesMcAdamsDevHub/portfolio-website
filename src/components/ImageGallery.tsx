@@ -1,11 +1,13 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useState } from "react";
 
 type GalleryImage = {
+  type: string;
   src: string;
   alt: string;
+  poster?: string;
 };
 
 type ImageGalleryProps = {
@@ -21,44 +23,64 @@ export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
   }
 
   return (
-    <div className="m-1 flex flex-col items-center">
-      <Image
-        className="rounded-lg border-3 border-orange-700 object-cover object-center"
-        src={imageSrcList[mainImage].src}
-        alt={imageSrcList[mainImage].alt}
-        width={600}
-        height={250}
-        loading="eager"
-        unoptimized
-      />
-
+    <div className="w-full min-w-0 max-w-lg justify-self-center">
+      {imageSrcList[mainImage].type === "video" ? (
+        <video
+          key={imageSrcList[mainImage].src}
+          className="aspect-video h-auto max-h-128 w-full rounded-md border border-slate-700 bg-[#090d10] object-contain"
+          src={imageSrcList[mainImage].src}
+          poster={imageSrcList[mainImage].poster}
+          aria-label={imageSrcList[mainImage].alt}
+          controls
+          playsInline
+          preload="none"
+        />
+      ) : (
+        <Image
+          className="aspect-video h-auto max-h-128 w-full rounded-md border border-slate-700 bg-[#090d10] object-contain"
+          src={imageSrcList[mainImage].src}
+          alt={imageSrcList[mainImage].alt}
+          width={600}
+          height={400}
+          loading="eager"
+          unoptimized
+        />
+      )}
       {imageCount > 1 && (
-        <div className="mt-2 flex w-full flex-wrap justify-center gap-2">
-          {imageSrcList.map((img, idx) => (
-            <button
-              key={`${img.src}-${idx}`}
-              type="button"
-              onClick={() => setSelectedToMain(idx)}
-              className={`cursor-pointer rounded transition ${
-                mainImage === idx
-                  ? "border-2 border-orange-700 opacity-100"
-                  : "border-2 border-transparent opacity-75 hover:opacity-100"
-              }`}
-              aria-label={`Show ${img.alt}`}
-              aria-pressed={mainImage === idx}
-            >
-              <Image
-                className="h-16 w-28 rounded object-cover"
-                src={img.src}
-                alt={img.alt}
-                width={150}
-                height={75}
-                loading="eager"
-                unoptimized
-              />
-            </button>
-          ))}
-        </div>
+        <>
+          <div
+            className="mt-3 flex flex-wrap gap-3"
+            role="group"
+            aria-label="Choose project media"
+          >
+            {imageSrcList.map((img, idx) => (
+              <button
+                key={`${img.src}-${idx}`}
+                type="button"
+                onClick={() => setSelectedToMain(idx)}
+                className={`cursor-pointer rounded-sm border-2 p-1 hover:bg-slate-800 motion-safe:transition-colors motion-safe:duration-150 ${mainImage === idx ? "border-orange-400 bg-slate-800" : "border-slate-500 bg-[#10171b]"}`}
+                aria-label={`Show ${img.alt}`}
+                aria-pressed={mainImage === idx}
+              >
+                <Image
+                  className="h-14 w-22 rounded object-contain"
+                  src={img.poster ? img.poster : img.src}
+                  alt=""
+                  width={150}
+                  height={75}
+                  unoptimized
+                />
+              </button>
+            ))}
+          </div>
+          <p
+            className="mt-2 text-sm text-slate-300"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            {mainImage + 1} of {imageCount}: {imageSrcList[mainImage].alt}
+          </p>
+        </>
       )}
     </div>
   );

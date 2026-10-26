@@ -1,4 +1,4 @@
-import ExperienceCard from "@/components/ExperienceCard";
+﻿import ExperienceCard from "@/components/ExperienceCard";
 import resume from "@/content/resume.json";
 
 type ExperienceCardsProps = {
@@ -13,7 +13,12 @@ export default function ExperienceCards({
     : resume.experience;
 
   return (
-    <div className="site-scrollbar flex w-full flex-col gap-6 2xl:max-h-140 2xl:overflow-y-auto 2xl:pr-2">
+    <div
+      className={`flex flex-col gap-4 ${featuredOnly ? "" : "p-2 [scrollbar-width:thin] 2xl:max-h-[60svh] 2xl:overflow-y-auto"}`}
+      role={featuredOnly ? undefined : "region"}
+      aria-label={featuredOnly ? undefined : "Work experience"}
+      tabIndex={featuredOnly ? undefined : 0}
+    >
       {experienceToShow.map((experience) => (
         <ExperienceCard
           key={`${experience.title}-${experience.startDate}`}

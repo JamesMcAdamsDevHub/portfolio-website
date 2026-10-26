@@ -1,57 +1,46 @@
-import resume from "@/content/resume.json";
+﻿import resume from "@/content/resume.json";
 
 export default function SkillsCard() {
   const skills = resume.skills;
 
   return (
-    <article className="w-full bg-transparent px-5 py-2">
-      <header className="border-b-2 border-orange-700 pt-2">
-        <h2 className="text-xl font-bold lg:text-2xl">Skills</h2>
-      </header>
-
-      <div className="space-y-1 pt-2 text-sm">
-        <div>
-          <p className="font-semibold">Languages:</p>
-          <p className="text-black/75">
-            {skills.languages.map((skill, index) => (
-              <span key={skill}>
-                {skill}
-                {index < skills.languages.length - 1 && (
-                  <span aria-hidden="true"> • </span>
-                )}
-              </span>
-            ))}
-          </p>
-        </div>
-
-        <div>
-          <p className="font-semibold">Technologies:</p>
-          <p className="text-black/75">
-            {skills.technologies.map((skill, index) => (
-              <span key={skill}>
-                {skill}
-                {index < skills.technologies.length - 1 && (
-                  <span aria-hidden="true"> • </span>
-                )}
-              </span>
-            ))}
-          </p>
-        </div>
-
-        <div>
-          <p className="font-semibold">Concepts:</p>
-          <p className="text-black/75">
-            {skills.concepts.map((skill, index) => (
-              <span key={skill}>
-                {skill}
-                {index < skills.concepts.length - 1 && (
-                  <span aria-hidden="true"> • </span>
-                )}
-              </span>
-            ))}
-          </p>
-        </div>
-      </div>
-    </article>
+    <section
+      className="min-w-0 rounded-lg border border-slate-700 bg-[#10171b] p-4 2xl:py-3"
+      aria-labelledby="skills-heading"
+    >
+      <h3
+        id="skills-heading"
+        className="mb-2 font-mono text-lg font-semibold tracking-tight text-slate-100"
+      >
+        Skills
+      </h3>
+      <dl className="grid grid-cols-1 gap-2 text-sm text-slate-300">
+        {[
+          { label: "Languages", items: skills.languages },
+          { label: "Technologies", items: skills.technologies },
+          { label: "Concepts", items: skills.concepts },
+        ].map(({ label, items }) => (
+          <div key={label}>
+            <dt className="font-semibold text-orange-400">{label}</dt>
+            <dd className="mt-1 min-w-0">
+              <ul
+                className="flex list-none flex-wrap gap-1.5"
+                role="list"
+                aria-label={label}
+              >
+                {items.map((item) => (
+                  <li
+                    key={item}
+                    className="min-w-0 rounded-sm border border-slate-600 bg-slate-900 px-2 py-0.5 break-words"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </section>
   );
 }

@@ -1,7 +1,7 @@
-export default function Footer() {
+﻿export default function Footer() {
   return (
-    <div className="w-full text-xs text-center font-bold border-t border-orange-700 bg-linear-to-br from-orange-600/90 to-amber-600/90">
-      <footer className="py-2">Copyright © 2026 James McAdams</footer>
-    </div>
+    <footer className="border-t-2 border-orange-900 bg-[#10171b] px-4 md:px-24 py-2 mt-3 text-slate-300">
+      <div className="text-center text-xs">Copyright © 2026 James McAdams</div>
+    </footer>
   );
 }

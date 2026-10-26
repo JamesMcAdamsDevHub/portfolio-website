@@ -24,8 +24,18 @@ export default function Social({ platform }: Platform) {
   }
 
   return (
-    <a href={link}>
-      <Image src={imagePath} alt={imageAlt} width={36} height={36} />
+    <a
+      href={link}
+      className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-slate-500 bg-[#090d10] hover:border-orange-400"
+      aria-label={`James McAdams on ${imageAlt}`}
+    >
+      <Image
+        className={`h-7 w-7 ${platform === "github" ? "invert" : ""}`}
+        src={imagePath}
+        alt={imageAlt}
+        width={36}
+        height={36}
+      />
     </a>
   );
 }

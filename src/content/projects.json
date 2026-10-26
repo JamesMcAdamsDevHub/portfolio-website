@@ -17,7 +17,7 @@
     "media": [
       {
         "type": "game",
-        "src": "/images/projects/minesweeper/screenshot-minesweeper.png",
+        "src": "/images/projects/minesweeper/ms-screen-shot.png",
         "alt": "Screenshot of Minesweeper gameplay",
         "description": "Play Minesweeper directly in your browser"
       }
@@ -40,7 +40,7 @@
     "media": [
       {
         "type": "image",
-        "src": "/images/projects/portfolio-website/portfolio_thumbnail.png",
+        "src": "/images/projects/portfolio-website/site-screenshot.png",
         "alt": "Screenshot of Home page",
         "description": "Screenshot of Home page"
       }
@@ -64,14 +64,16 @@
         "description": "Customizable tracks"
       },
       {
-        "type": "image",
-        "src": "/images/projects/track-generation/track_demo.gif",
+        "type": "video",
+        "src": "/images/projects/track-generation/track_demo.mp4",
+        "poster": "/images/projects/track-generation/track_demo.jpg",
         "alt": "Track generation demo",
         "description": "Demo of track generation tool"
       },
       {
-        "type": "image",
-        "src": "/images/projects/track-generation/street_demo.gif",
+        "type": "video",
+        "src": "/images/projects/track-generation/street_demo.mp4",
+        "poster": "/images/projects/track-generation/street_demo.jpg",
         "alt": "Creating roadways",
         "description": "Creating roadways"
       }

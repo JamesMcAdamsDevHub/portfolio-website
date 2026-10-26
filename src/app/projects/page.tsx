@@ -1,15 +1,20 @@
-import ProjectCards from "@/components/ProjectCards";
+﻿import ProjectCards from "@/components/ProjectCards";
 
-export default function Home() {
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects | James McAdams",
+};
+
+export default function Projects() {
   return (
-    <main className="mx-auto max-w-7xl px-2 py-2 lg:px-30">
-      <section>
-        <h2 className="w-fit mx-auto pl-2 mb-1 border-b-3 border-orange-700 text-orange-900 text-2xl font-bold text-center">
-          PROJECTS
-        </h2>
-
-        <ProjectCards featuredOnly={false} />
-      </section>
+    <main
+      className="mx-auto flex w-full max-w-440 flex-col px-4 py-6 break-words leading-relaxed lg:px-8"
+    >
+      <h1 className="mb-4 text-center text-3xl font-bold tracking-tight md:text-left md:text-4xl">
+        Projects
+      </h1>
+      <ProjectCards featuredOnly={false} />
     </main>
   );
 }

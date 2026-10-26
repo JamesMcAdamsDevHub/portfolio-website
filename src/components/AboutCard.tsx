@@ -1,40 +1,39 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Social from "@/components/Social";
 import about from "@/content/about.json";
 
 export default function AboutCard() {
   return (
-    <article className="flex w-full flex-col items-center gap-2 bg-transparent p-2 md:flex-row md:items-start">
+    <article
+      className="flex min-w-0 flex-col items-center gap-6 rounded-lg border border-slate-700 bg-[#10171b] p-4 md:flex-row 2xl:py-2"
+      aria-labelledby="about-name"
+    >
       <Image
         src={about.profileImage}
         alt={about.profileImageAlt}
         width={300}
         height={300}
-        className="
-          h-auto
-          w-full
-          max-w-45
-          rounded-lg
-          border-4
-          border-orange-700
-          shadow-lg
-        "
+        sizes="(min-width: 1536px) 128px, 144px"
+        className="h-auto w-36 max-w-full shrink-0 rounded-sm border border-slate-600 bg-[#10171b] 2xl:w-32"
+        loading="eager"
       />
-
-      <div className="flex-1">
-        <div className="flex flex-col items-center gap-2 border-b-2 border-orange-700 pl-2 md:flex-row md:justify-start">
-          <h1 className="whitespace-nowrap text-center text-3xl font-bold lg:text-4xl">
+      <div className="min-w-0 w-full">
+        <div className="flex flex-col items-center gap-3 md:flex-row md:flex-wrap md:justify-between">
+          <h1
+            id="about-name"
+            className="min-w-0 break-words text-center text-3xl font-bold tracking-tight text-orange-400 md:text-left md:text-4xl 2xl:text-5xl"
+          >
             {about.name}
           </h1>
-
-          <div className="flex gap-1 pb-2 md:pb-0">
+          <div className="flex flex-wrap gap-2">
             <Social platform="linkedin" />
             <Social platform="github" />
             <Social platform="instagram" />
           </div>
         </div>
-
-        <p className="m-4 leading-relaxed">{about.introduction}</p>
+        <p className="mt-2 leading-6 text-slate-300 2xl:mt-1">
+          {about.introduction}
+        </p>
       </div>
     </article>
   );

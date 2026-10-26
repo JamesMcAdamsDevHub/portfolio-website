@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #090d10;
+  --foreground: #f5f7fa;
 }
 
 @theme inline {
@@ -15,34 +15,12 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.site-scrollbar {
-  scrollbar-width: thin;
-  scrollbar-color: #c2410c transparent;
-}
-
-.site-scrollbar::-webkit-scrollbar {
-  width: 8px;
-}
-
-.site-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.site-scrollbar::-webkit-scrollbar-thumb {
-  background: #c2410c;
-  border-radius: 4px;
-}
-
-.site-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: #9a3412;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
 html {
   scrollbar-width: thin;
-  scrollbar-color: #c2410c transparent;
+  scrollbar-color: #ff821c transparent;
 }
 
 html::-webkit-scrollbar {
@@ -54,16 +32,16 @@ html::-webkit-scrollbar-track {
 }
 
 html::-webkit-scrollbar-thumb {
-  background: #c2410c;
+  background: #ff821c;
   border-radius: 4px;
 }
 
 html::-webkit-scrollbar-thumb:hover {
-  background: #9a3412;
+  background: #fdba74;
 }
 
 :focus-visible {
-  outline: 3px solid #0099ff;
-  outline-offset: -2px;
+  outline: 3px solid #fdba74;
+  outline-offset: 4px;
   border-radius: 2px;
 }

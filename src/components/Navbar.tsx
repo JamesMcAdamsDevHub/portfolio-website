@@ -1,48 +1,43 @@
-"use client";
+﻿"use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import about from "@/content/about.json";
+
+const destinations = [
+  { href: "/", label: "Home" },
+  { href: "/projects", label: "Projects" },
+  { href: "/resume", label: "Resume" },
+];
 
 export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full flex items-stretch justify-between border-b border-orange-700 bg-linear-to-br from-orange-600 to-amber-600">
-      <p className="hidden md:block text-2xl lg:text-bold p-1 pl-6">
-        Portfolio Site
-        <span aria-hidden="true"> | </span>
-        James McAdams
-      </p>
-
-      <nav className="flex w-full md:w-auto justify-center text-2xl md:text-lg">
-        <Link
-          href="/"
-          className={`flex items-center justify-center w-32 py-1 ${
-            pathname === "/" ? "bg-orange-700" : "hover:bg-orange-600"
-          }`}
+    <header className="sticky top-0 z-50 border-b-2 border-slate-700 bg-[#10171b] text-slate-100">
+      <div className="mx-auto flex w-full max-w-440 flex-wrap items-center justify-between gap-2 px-4 py-3 lg:px-8">
+        <p className="hidden text-lg font-semibold tracking-tight md:block">
+          {about.name}{" "}
+          <span className="text-slate-300">
+            <span aria-hidden="true">|</span> Software Engineer
+          </span>
+        </p>
+        <nav
+          className="flex w-full flex-wrap justify-center gap-1 md:w-auto"
+          aria-label="Main navigation"
         >
-          Home
-        </Link>
-
-        <Link
-          href="/projects"
-          className={`flex items-center justify-center w-32 py-1 ${
-            pathname === "/projects" ? "bg-orange-700" : "hover:bg-orange-600"
-          }`}
-        >
-          Projects
-        </Link>
-
-        <Link
-          href="/resume"
-          className={`flex items-center justify-center w-32 py-1 ${
-            pathname === "/resume" ? "bg-orange-700" : "hover:bg-orange-600"
-          }`}
-        >
-          Resume
-        </Link>
-      </nav>
+          {destinations.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`inline-flex min-h-11 items-center rounded-sm px-3 py-2 text-sm font-medium md:text-base underline-offset-4 focus-visible:outline-orange-300! motion-safe:transition-colors motion-safe:duration-150 ${pathname === href ? "text-orange-400 underline decoration-2 underline-offset-8" : "hover:bg-slate-800 hover:underline"}`}
+              aria-current={pathname === href ? "page" : undefined}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+      </div>
     </header>
   );
 }

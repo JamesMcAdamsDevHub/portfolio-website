@@ -1,5 +1,5 @@
+﻿import Image from "next/image";
 import Link from "next/link";
-import Image from "next/image";
 
 type ProjectFeatureCardProps = {
   project: {
@@ -21,83 +21,72 @@ export default function ProjectFeatureCard({
   project,
 }: ProjectFeatureCardProps) {
   return (
-    <article className="flex h-full w-full flex-col bg-transparent px-5 py-4">
-      <header className="mb-2 border-b-2 border-orange-700">
-        <h2 className="text-lg font-bold">
-          {project.title}
-
-          {project.repoLink && (
-            <Link
-              href={project.repoLink}
-              className="ml-2 text-xs font-normal text-black/70 hover:text-blue-600"
-            >
-              GitHub <span aria-hidden="true">↗</span>
-            </Link>
-          )}
-        </h2>
-      </header>
-
-      <div className="relative mx-auto w-3/4">
+    <article className="grid min-w-0 grid-cols-1 gap-4 rounded-lg border border-slate-700 bg-[#10171b] p-4 md:grid-cols-[2fr_3fr] 2xl:px-3 2xl:py-2.5">
+      {project.media[0] && (
         <Image
-          className="aspect-[14/9] rounded-lg border-3 border-orange-700 object-cover object-center"
+          className="aspect-video h-auto w-full max-w-96 self-center justify-self-center rounded-md border border-slate-700 bg-[#090d10] object-contain"
           src={project.media[0].src}
           alt={project.media[0].alt}
           width={600}
-          height={300}
+          height={390}
           loading="eager"
+          sizes="(min-width: 1536px) 500px, (min-width: 768px) 45vw, 90vw"
         />
-
-        {project.playLink && (
-          <Link
-            href={project.playLink}
-            className="absolute inset-0 flex items-center justify-center rounded-lg hover:bg-black/20"
-            aria-label={`Play ${project.title}`}
-          >
-            <span className="rounded-lg bg-orange-700/80 px-5 py-3 text-lg font-bold text-white hover:bg-orange-800/90">
-              <span aria-hidden="true">▶ </span> Play Game
-            </span>
-          </Link>
-        )}
-      </div>
-
-      <p className="mt-3">{project.briefDescription}</p>
-
-      <div className="mt-auto space-y-0.5 pt-3 text-sm text-black/75">
-        <p>
-          <span className="font-semibold text-black">Languages:</span>{" "}
-          {project.languages.map((language, index) => (
-            <span key={language}>
-              {language}
-              {index < project.languages.length - 1 && (
-                <span aria-hidden="true"> • </span>
-              )}
-            </span>
-          ))}
+      )}
+      <div className="flex min-w-0 flex-col gap-2 2xl:gap-1">
+        <h3 className="font-mono text-xl leading-7 font-semibold tracking-tight text-slate-100">
+          {project.title}
+        </h3>
+        <p className="text-sm leading-5 text-slate-300">
+          {project.briefDescription}
         </p>
-
-        <p>
-          <span className="font-semibold text-black">Technologies:</span>{" "}
-          {project.technologies.map((technology, index) => (
-            <span key={technology}>
-              {technology}
-              {index < project.technologies.length - 1 && (
-                <span aria-hidden="true"> • </span>
-              )}
-            </span>
+        <dl className="grid grid-cols-1 gap-1.5 text-sm leading-5 text-slate-300 2xl:gap-1">
+          {[
+            { label: "Languages", items: project.languages },
+            { label: "Technologies", items: project.technologies },
+            { label: "Concepts", items: project.concepts },
+          ].map(({ label, items }) => (
+            <div key={label}>
+              <dt className="font-semibold text-orange-400">{label}</dt>
+              <dd className="mt-1 min-w-0 2xl:mt-0.5">
+                <ul
+                  className="flex list-none flex-wrap gap-1.5 2xl:gap-1"
+                  role="list"
+                  aria-label={label}
+                >
+                  {items.map((item) => (
+                    <li
+                      key={item}
+                      className="min-w-0 rounded-sm border border-slate-700 bg-slate-900 px-2 py-0.5 break-words 2xl:py-0"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+            </div>
           ))}
-        </p>
-
-        <p>
-          <span className="font-semibold text-black">Concepts:</span>{" "}
-          {project.concepts.map((concept, index) => (
-            <span key={concept}>
-              {concept}
-              {index < project.concepts.length - 1 && (
-                <span aria-hidden="true"> • </span>
-              )}
-            </span>
-          ))}
-        </p>
+        </dl>
+        <div className="mt-auto flex min-h-8 flex-wrap items-center gap-3 pt-1 2xl:pt-0">
+          {project.playLink && (
+            <Link
+              href={project.playLink}
+              className="inline-flex min-h-8 items-center gap-2 rounded-sm bg-orange-400 px-2.5 py-1 text-sm font-semibold text-slate-950 hover:bg-orange-300 motion-safe:transition-colors motion-safe:duration-150"
+            >
+              <span aria-hidden="true">▶</span> Play Game
+              <span className="sr-only">: {project.title}</span>
+            </Link>
+          )}
+          {project.repoLink && (
+            <Link
+              href={project.repoLink}
+              className="inline-flex min-h-8 items-center gap-1 rounded-sm border border-slate-500 px-2.5 py-1 text-sm font-semibold text-slate-100 underline underline-offset-4 hover:border-orange-400 hover:text-orange-300 motion-safe:transition-colors motion-safe:duration-150"
+            >
+              GitHub<span className="sr-only">: {project.title}</span>{" "}
+              <span aria-hidden="true">↗</span>
+            </Link>
+          )}
+        </div>
       </div>
     </article>
   );

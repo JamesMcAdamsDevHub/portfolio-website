@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Unity compiler output is a third-party build artifact, not editable source.
+    "public/games/**/Build/**",
   ]),
 ]);
 

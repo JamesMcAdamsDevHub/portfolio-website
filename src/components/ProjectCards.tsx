@@ -1,4 +1,4 @@
-import ProjectCard from "@/components/ProjectCard";
+﻿import ProjectCard from "@/components/ProjectCard";
 import ProjectFeatureCard from "@/components/ProjectFeatureCard";
 import projects from "@/content/projects.json";
 
@@ -13,7 +13,7 @@ export default function ProjectCards({ featuredOnly }: ProjectCardsProps) {
 
   if (featuredOnly) {
     return (
-      <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-3 2xl:gap-2">
         {projectsToShow.map((project) => (
           <ProjectFeatureCard key={project.title} project={project} />
         ))}
@@ -22,7 +22,7 @@ export default function ProjectCards({ featuredOnly }: ProjectCardsProps) {
   }
 
   return (
-    <div className="site-scrollbar flex w-full flex-col gap-2 2xl:max-h-200 2xl:overflow-y-auto 2xl:pr-2">
+    <div className="flex flex-col gap-6 py-2">
       {projectsToShow.map((project) => (
         <ProjectCard key={project.title} project={project} />
       ))}

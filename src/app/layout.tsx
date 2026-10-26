@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -24,14 +24,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full scroll-pt-24 antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
 
-        <div className="flex-1 bg-linear-to-br from-orange-300 to-amber-100">
-          {children}
-        </div>
+        <div className="flex-1 xl:min-h-0">{children}</div>
 
         <Footer />
       </body>

@@ -1,4 +1,4 @@
-type ExperienceCardProps = {
+﻿type ExperienceCardProps = {
   experience: {
     company: string;
     location: string;
@@ -12,26 +12,23 @@ type ExperienceCardProps = {
 
 export default function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
-    <article className="w-full bg-transparent px-5 py-2">
-      <header className="border-b-2 border-orange-700 pt-2 md:flex md:justify-between">
-        <div>
-          <h2 className="text-xl font-bold lg:text-2xl">
+    <article className="min-w-0 shrink-0 rounded-lg border border-slate-700 bg-[#10171b] p-4 2xl:py-3">
+      <header className="flex flex-wrap items-start justify-between gap-2">
+        <div className="min-w-0">
+          <h3 className="text-lg font-semibold tracking-tight">
             {experience.company}
-          </h2>
-
-          <p className="text-lg leading-tight">{experience.title}</p>
+          </h3>
+          <p className="font-medium text-orange-400">{experience.title}</p>
         </div>
-
-        <div className="text-xs font-semibold leading-tight text-black/70 md:text-right md:text-sm">
+        <div className="text-sm text-slate-300 sm:text-right">
           <p>
-            {experience.startDate} -{" "}
+            {experience.startDate} –{" "}
             {experience.endDate === null ? "present" : experience.endDate}
           </p>
           <p>{experience.location}</p>
         </div>
       </header>
-
-      <ul className="mt-2 list-disc space-y-0.5 py-1 pl-6 text-sm">
+      <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed marker:text-orange-400">
         {experience.details.map((desc) => (
           <li key={desc}>{desc}</li>
         ))}

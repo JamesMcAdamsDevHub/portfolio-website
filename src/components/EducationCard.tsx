@@ -1,34 +1,37 @@
-import resume from "@/content/resume.json";
+﻿import resume from "@/content/resume.json";
 
 export default function EducationCard() {
   const education = resume.education;
 
   return (
-    <article className="w-full bg-transparent px-5 py-2">
-      <header className="flex flex-wrap items-baseline justify-between gap-x-4 border-b-2 border-orange-700 pt-2">
-        <h2 className="text-xl font-bold lg:text-2xl">{education.school}</h2>
-
-        <p className="text-sm font-semibold text-black/70">
-          {education.location}
-        </p>
-      </header>
-
-      <div className="space-y-1 py-2 text-sm">
-        <div>
-          <p className="font-semibold">Major:</p>
-          <p className="text-black/75">{education.degree}</p>
+    <section
+      className="min-w-0 rounded-lg border border-slate-700 bg-[#10171b] p-4 2xl:py-3"
+      aria-labelledby="education-heading"
+    >
+      <h3
+        id="education-heading"
+        className="mb-3 font-mono text-lg font-semibold tracking-tight text-slate-100"
+      >
+        Education
+      </h3>
+      <p className="text-lg leading-6 font-semibold">{education.school}</p>
+      <p className="text-sm text-slate-300">{education.location}</p>
+      <dl className="mt-2 grid gap-x-8 gap-y-2 text-sm text-slate-300 sm:grid-cols-[max-content_1fr]">
+        <div className="sm:col-span-2">
+          <dt className="font-semibold text-slate-100">Major</dt>
+          <dd>
+            {education.degree}
+          </dd>
         </div>
-
         <div>
-          <p className="font-semibold">Graduation:</p>
-          <p className="text-black/75">{education.graduationDate}</p>
+          <dt className="font-semibold text-slate-100">Graduation</dt>
+          <dd>{education.graduationDate}</dd>
         </div>
-
         <div>
-          <p className="font-semibold">GPA:</p>
-          <p className="text-black/75">{education.gpa}</p>
+          <dt className="font-semibold text-slate-100">GPA</dt>
+          <dd>{education.gpa}</dd>
         </div>
-      </div>
-    </article>
+      </dl>
+    </section>
   );
 }

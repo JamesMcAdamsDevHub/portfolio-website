@@ -1,56 +1,75 @@
-import ExperienceCards from "@/components/ExperienceCards";
+﻿import ExperienceCards from "@/components/ExperienceCards";
 import SkillsCard from "@/components/SkillsCard";
 import EducationCard from "@/components/EducationCard";
 import Social from "@/components/Social";
 import resume from "@/content/resume.json";
+import type { Metadata } from "next";
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Resume | James McAdams",
+};
+
+export default function Resume() {
   return (
-    <main className="mx-auto w-full px-2 pt-2 lg:px-30">
-      <header className="text-center">
-        <h2 className="w-fit mx-auto pl-2 mb-1 border-b-3 border-orange-700 text-orange-900 text-2xl font-bold text-center">
-          RESUME
-        </h2>
-
-        <div className="mt-2">
-          <p className="text-xl font-bold">{resume.name}</p>
-          <p className="mt-1">{resume.email}</p>
+    <main
+      className="mx-auto flex w-full max-w-440 flex-col px-4 py-3 break-words leading-relaxed lg:px-8"
+    >
+      <header className="mb-4 flex shrink-0 flex-col items-center justify-between gap-4 text-center md:flex-row md:flex-wrap md:items-start md:text-left">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
+            Resume
+          </h1>
+          <p className="mt-2 text-xl font-semibold">{resume.name}</p>
+          <p className="mt-1">
+            <a
+              className="break-all font-semibold text-orange-400 underline underline-offset-4 hover:text-orange-300"
+              href={`mailto:${resume.email}`}
+            >
+              {resume.email}
+            </a>
+          </p>
         </div>
-
-        <div className="mt-3 flex flex-col items-center gap-2">
-          <div className="flex gap-2">
+        <div className="flex flex-col items-center gap-3 md:items-start">
+          <div className="flex flex-wrap gap-2">
             <Social platform="linkedin" />
             <Social platform="github" />
             <Social platform="instagram" />
           </div>
-
           <a
             href="/documents/James-McAdams-Resume.pdf"
             download
-            className="font-bold text-orange-900 hover:text-blue-600"
+            className="inline-flex min-h-11 items-center rounded-sm bg-orange-400 px-4 py-2 font-semibold text-slate-950 hover:bg-orange-300 motion-safe:transition-colors motion-safe:duration-150"
           >
             Download Resume (PDF)
           </a>
         </div>
       </header>
-
-      <div className="mt-2 grid grid-cols-1 gap-4 2xl:grid-cols-[3fr_10fr]">
-        <section className="mb-1">
-          <h2 className="mb-1 border-b-3 border-orange-700 py-2 pl-2 text-center text-xl font-bold text-orange-900 2xl:text-left">
-            SKILLS & EDUCATION
+      <div className="grid grid-cols-1 gap-6 2xl:grid-cols-[1fr_2fr]">
+        <section
+          className="flex min-w-0 flex-col"
+          aria-labelledby="skills-education"
+        >
+          <h2
+            id="skills-education"
+            className="mb-2 text-center font-mono text-lg font-semibold tracking-tight text-slate-100 md:text-left"
+          >
+            Skills &amp; Education
           </h2>
-
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 p-2">
             <SkillsCard />
             <EducationCard />
           </div>
         </section>
-
-        <section>
-          <h2 className="mb-1 border-b-3 border-orange-700 py-2 pl-2 text-center text-xl font-bold text-orange-900 2xl:text-left">
-            EXPERIENCE
+        <section
+          className="flex min-w-0 flex-col"
+          aria-labelledby="experience-heading"
+        >
+          <h2
+            id="experience-heading"
+            className="mb-2 text-center font-mono text-lg font-semibold tracking-tight text-slate-100 md:text-left"
+          >
+            Experience
           </h2>
-
           <ExperienceCards featuredOnly={false} />
         </section>
       </div>
