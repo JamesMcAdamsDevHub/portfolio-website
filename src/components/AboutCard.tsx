@@ -19,12 +19,12 @@ export default function AboutCard() {
       />
       <div className="min-w-0 w-full">
         <div className="flex flex-col items-center gap-3 md:flex-row md:flex-wrap md:justify-between">
-          <h1
+          <h2
             id="about-name"
             className="min-w-0 break-words text-center text-3xl font-bold tracking-tight text-orange-400 md:text-left md:text-4xl 2xl:text-5xl"
           >
             {about.name}
-          </h1>
+          </h2>
           <div className="flex flex-wrap gap-2">
             <Social platform="linkedin" />
             <Social platform="github" />

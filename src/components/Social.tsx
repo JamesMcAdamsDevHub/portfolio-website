@@ -10,7 +10,7 @@ export default function Social({ platform }: Platform) {
   let link: string;
 
   if (platform === "github") {
-    imagePath = "/images/socials/github.png";
+    imagePath = "/images/socials/github.webp";
     imageAlt = "GitHub";
     link = "https://github.com/jamesMcAdamsDevHub";
   } else if (platform === "instagram") {
@@ -18,7 +18,7 @@ export default function Social({ platform }: Platform) {
     imageAlt = "Instagram";
     link = "https://www.instagram.com/jimmycodesgames/";
   } else {
-    imagePath = "/images/socials/linkedin.png";
+    imagePath = "/images/socials/linkedin.webp";
     imageAlt = "LinkedIn";
     link = "https://www.linkedin.com/in/james-mcadams-dev/";
   }

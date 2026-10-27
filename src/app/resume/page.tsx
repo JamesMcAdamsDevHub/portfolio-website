@@ -12,6 +12,8 @@ export const metadata: Metadata = {
 export default function Resume() {
   return (
     <main
+      id="main-content"
+      tabIndex={-1}
       className="mx-auto flex w-full max-w-440 flex-col px-4 py-3 break-words leading-relaxed lg:px-8"
     >
       <header className="mb-4 flex shrink-0 flex-col items-center justify-between gap-4 text-center md:flex-row md:flex-wrap md:items-start md:text-left">

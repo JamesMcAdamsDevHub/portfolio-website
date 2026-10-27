@@ -23,20 +23,19 @@ export default function SkillsCard() {
           <div key={label}>
             <dt className="font-semibold text-orange-400">{label}</dt>
             <dd className="mt-1 min-w-0">
-              <ul
-                className="flex list-none flex-wrap gap-1.5"
-                role="list"
-                aria-label={label}
-              >
-                {items.map((item) => (
-                  <li
-                    key={item}
+              <span className="flex flex-wrap gap-1.5">
+                {items.map((item, index) => (
+                  <span
+                    key={`${item}-${index}`}
                     className="min-w-0 rounded-sm border border-slate-600 bg-slate-900 px-2 py-0.5 break-words"
                   >
                     {item}
-                  </li>
+                    {index < items.length - 1 && (
+                      <span className="sr-only">, </span>
+                    )}
+                  </span>
                 ))}
-              </ul>
+              </span>
             </dd>
           </div>
         ))}

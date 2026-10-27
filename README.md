@@ -54,9 +54,11 @@ The website must include:
 - [x] Responsive layouts for desktop and mobile devices
 - [x] Clear and consistent navigation
 - [x] Semantic HTML where appropriate
-- [x] Keyboard-accessible interactive elements
+- [x] Keyboard-accessible navigation and portfolio controls
 - [x] Appropriate alternative text for informative images
 - [x] Consistent styling throughout the website
+
+The embedded Unity Minesweeper game currently uses pointer or touch controls. Its play page explains this limitation; keyboard support for the game is future work.
 
 ### Create an easily maintainable project system
 
@@ -76,3 +78,16 @@ The finished website must:
 - [x] Be hosted with ~~GitHub Pages~~ Vercel
 - [x] Be available at jamesmcadams.dev
 - [x] Use HTTPS
+
+## Run locally
+
+Use Node.js 24, then run:
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`. Run `npm run lint` and `npm run build` to check the project before a review or deployment.
+
+Project details are in `src/content/projects.json`, and resume details are in `src/content/resume.json`.

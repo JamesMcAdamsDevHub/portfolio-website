@@ -8,6 +8,7 @@ type GalleryImage = {
   src: string;
   alt: string;
   poster?: string;
+  description?: string;
 };
 
 type ImageGalleryProps = {
@@ -46,6 +47,15 @@ export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
           unoptimized
         />
       )}
+      {imageSrcList[mainImage].type === "video" &&
+        imageSrcList[mainImage].description && (
+          <p className="mt-2 text-sm leading-relaxed text-slate-300">
+            <span className="font-semibold text-slate-100">
+              Video description:{" "}
+            </span>
+            {imageSrcList[mainImage].description}
+          </p>
+        )}
       {imageCount > 1 && (
         <>
           <div
@@ -68,7 +78,7 @@ export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
                   alt=""
                   width={150}
                   height={75}
-                  unoptimized
+                  sizes="88px"
                 />
               </button>
             ))}

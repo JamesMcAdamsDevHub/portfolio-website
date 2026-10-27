@@ -22,7 +22,12 @@ export default function ProjectCards({ featuredOnly }: ProjectCardsProps) {
   }
 
   return (
-    <div className="flex flex-col gap-6 py-2">
+    <div
+      className="flex flex-col gap-6 p-2 [scrollbar-width:thin] 2xl:min-h-0 2xl:flex-1 2xl:overflow-y-auto 2xl:[contain:paint]"
+      role="region"
+      aria-label="Projects"
+      tabIndex={0}
+    >
       {projectsToShow.map((project) => (
         <ProjectCard key={project.title} project={project} />
       ))}

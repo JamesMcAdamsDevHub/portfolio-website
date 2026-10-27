@@ -13,14 +13,16 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main
+      id="main-content"
+      tabIndex={-1}
       className="mx-auto w-full max-w-440 px-4 pt-4 pb-1 leading-relaxed lg:px-8 2xl:pb-0"
     >
       <div className="grid grid-cols-1 gap-6 2xl:grid-cols-[5fr_3fr]">
         <div className="flex min-w-0 flex-col gap-3 2xl:gap-2">
           <div>
-            <p className="mb-2 text-center font-mono text-lg font-semibold tracking-tight text-slate-100 md:text-left 2xl:mb-1">
+            <h1 className="mb-2 text-center font-mono text-lg font-semibold tracking-tight text-slate-100 md:text-left 2xl:mb-1">
               About Me
-            </p>
+            </h1>
             <AboutCard />
           </div>
           <section aria-labelledby="featured-projects">

@@ -27,6 +27,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full scroll-pt-24 antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <a
+          href="#main-content"
+          className="sr-only fixed top-2 left-2 z-100 rounded-sm bg-orange-400 px-4 py-2 font-semibold text-slate-950 focus:not-sr-only"
+        >
+          Skip to main content
+        </a>
         <Navbar />
 
         <div className="flex-1 xl:min-h-0">{children}</div>

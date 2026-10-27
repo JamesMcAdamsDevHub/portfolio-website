@@ -28,9 +28,14 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           <p>{experience.location}</p>
         </div>
       </header>
-      <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-relaxed marker:text-orange-400">
+      <ul role="list" className="mt-3 list-none space-y-1 text-sm leading-relaxed">
         {experience.details.map((desc) => (
-          <li key={desc}>{desc}</li>
+          <li key={desc} className="flex gap-2">
+            <span aria-hidden="true" className="shrink-0 text-orange-400">
+              •
+            </span>
+            <span>{desc}</span>
+          </li>
         ))}
       </ul>
     </article>

@@ -17,7 +17,7 @@
     "media": [
       {
         "type": "game",
-        "src": "/images/projects/minesweeper/minesweeper_screenshot_02.png",
+        "src": "/images/projects/minesweeper/minesweeper_screenshot_02.webp",
         "alt": "Screenshot of Minesweeper gameplay",
         "description": "Play Minesweeper directly in your browser"
       }
@@ -40,7 +40,7 @@
     "media": [
       {
         "type": "image",
-        "src": "/images/projects/portfolio-website/site_screenshot_03.png",
+        "src": "/images/projects/portfolio-website/site_screenshot_03.webp",
         "alt": "Screenshot of Home page",
         "description": "Screenshot of Home page"
       }
@@ -66,16 +66,16 @@
       {
         "type": "video",
         "src": "/images/projects/track-generation/curve_demo.mp4",
-        "poster": "/images/projects/track-generation/curve_demo.png",
+        "poster": "/images/projects/track-generation/curve_demo.webp",
         "alt": "Curve component demo",
-        "description": "Demo of curve component"
+        "description": "Silent Unity editor recording. Curved road pieces are placed and adjusted on green terrain. The Inspector shows controls for curve radius, arc angle, direction, elevation, and banking while the view pans across the resulting bends."
       },
       {
         "type": "video",
         "src": "/images/projects/track-generation/roadways.mp4",
-        "poster": "/images/projects/track-generation/roadways_01.png",
+        "poster": "/images/projects/track-generation/roadways_01.webp",
         "alt": "Creating roadways",
-        "description": "Creating roadways"
+        "description": "Silent Unity editor recording. Spline-based road segments and intersections are laid across hilly terrain. The view moves closer to show connected streets, road edges, and lane markings."
       }
     ],
     "featured": true

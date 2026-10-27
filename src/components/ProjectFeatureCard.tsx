@@ -11,8 +11,10 @@ type ProjectFeatureCardProps = {
     technologies: string[];
     concepts: string[];
     media: {
+      type: string;
       src: string;
       alt: string;
+      poster?: string;
     }[];
   };
 };
@@ -20,13 +22,17 @@ type ProjectFeatureCardProps = {
 export default function ProjectFeatureCard({
   project,
 }: ProjectFeatureCardProps) {
+  const featuredMedia = project.media[0];
+  const featuredImageSrc =
+    featuredMedia?.type === "video" ? featuredMedia.poster : featuredMedia?.src;
+
   return (
     <article className="grid min-w-0 grid-cols-1 gap-4 rounded-lg border border-slate-700 bg-[#10171b] p-4 md:grid-cols-[2fr_3fr] 2xl:px-3 2xl:py-2.5">
-      {project.media[0] && (
+      {featuredImageSrc && (
         <Image
           className="aspect-video h-auto w-full max-w-96 self-center justify-self-center rounded-md border border-slate-700 bg-[#090d10] object-contain"
-          src={project.media[0].src}
-          alt={project.media[0].alt}
+          src={featuredImageSrc}
+          alt={featuredMedia.alt}
           width={600}
           height={390}
           loading="eager"
@@ -49,20 +55,19 @@ export default function ProjectFeatureCard({
             <div key={label}>
               <dt className="font-semibold text-orange-400">{label}</dt>
               <dd className="mt-1 min-w-0 2xl:mt-0.5">
-                <ul
-                  className="flex list-none flex-wrap gap-1.5 2xl:gap-1"
-                  role="list"
-                  aria-label={label}
-                >
-                  {items.map((item) => (
-                    <li
-                      key={item}
+                <span className="flex flex-wrap gap-1.5 2xl:gap-1">
+                  {items.map((item, index) => (
+                    <span
+                      key={`${item}-${index}`}
                       className="min-w-0 rounded-sm border border-slate-700 bg-slate-900 px-2 py-0.5 break-words 2xl:py-0"
                     >
                       {item}
-                    </li>
+                      {index < items.length - 1 && (
+                        <span className="sr-only">, </span>
+                      )}
+                    </span>
                   ))}
-                </ul>
+                </span>
               </dd>
             </div>
           ))}
