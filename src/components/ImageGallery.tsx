@@ -34,7 +34,7 @@ export default function ImageGallery({ imageSrcList }: ImageGalleryProps) {
           aria-label={imageSrcList[mainImage].alt}
           controls
           playsInline
-          preload="none"
+          preload="metadata"
         />
       ) : (
         <Image
