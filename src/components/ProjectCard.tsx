@@ -16,6 +16,7 @@ type ProjectCardProps = {
       src: string;
       alt: string;
       poster?: string;
+      description: string;
     }[];
   };
 };

@@ -19,7 +19,7 @@
         "type": "game",
         "src": "/images/projects/minesweeper/minesweeper_screenshot_02.webp",
         "alt": "Screenshot of Minesweeper gameplay",
-        "description": "Play Minesweeper directly in your browser"
+        "description": "A screenshot of Minesweeper after losing the game. The board shows placed flags, the Normal difficulty level, and Reset Board and Main Menu buttons."
       }
     ],
     "featured": true
@@ -41,8 +41,8 @@
       {
         "type": "image",
         "src": "/images/projects/portfolio-website/site_screenshot_03.webp",
-        "alt": "Screenshot of Home page",
-        "description": "Screenshot of Home page"
+        "alt": "Portfolio home page layout",
+        "description": "The dark-themed home page places an introduction and featured projects beside skills, education, and work experience, with navigation across the top."
       }
     ],
     "featured": false
@@ -60,8 +60,8 @@
       {
         "type": "image",
         "src": "/images/projects/track-generation/track_customization.jpg",
-        "alt": "Customizable tracks",
-        "description": "Customizable tracks"
+        "alt": "Three generated track layouts",
+        "description": "Three generated track layouts show a street with sidewalks, a mini-golf course, and a racetrack."
       },
       {
         "type": "video",
@@ -75,7 +75,7 @@
         "src": "/images/projects/track-generation/roadways.mp4",
         "poster": "/images/projects/track-generation/roadways_01.webp",
         "alt": "Creating roadways",
-        "description": "Silent Unity editor recording. Spline-based road segments and intersections are laid across hilly terrain. The view moves closer to show connected streets, road edges, and lane markings."
+        "description": "Silent Unity editor recording. Spline-based road segments and intersections are laid across hilly terrain. The view moves closer to show connected streets, lane markings, and sidewalks."
       }
     ],
     "featured": true
