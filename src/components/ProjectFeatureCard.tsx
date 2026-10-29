@@ -46,15 +46,15 @@ export default function ProjectFeatureCard({
         <p className="text-sm leading-5 text-slate-300">
           {project.briefDescription}
         </p>
-        <dl className="grid grid-cols-1 gap-1.5 text-sm leading-5 text-slate-300 2xl:gap-1">
+        <ul role="list" className="grid grid-cols-1 gap-1.5 text-sm leading-5 text-slate-300 2xl:gap-1">
           {[
             { label: "Languages", items: project.languages },
             { label: "Technologies", items: project.technologies },
             { label: "Concepts", items: project.concepts },
           ].map(({ label, items }) => (
-            <div key={label}>
-              <dt className="font-semibold text-orange-400">{label}</dt>
-              <dd className="mt-1 min-w-0 2xl:mt-0.5">
+            <li key={label}>
+              <span className="block font-semibold text-orange-400">{label}</span>
+              <span className="mt-1 block min-w-0 2xl:mt-0.5">
                 <span className="flex flex-wrap gap-1.5 2xl:gap-1">
                   {items.map((item, index) => (
                     <span
@@ -68,10 +68,10 @@ export default function ProjectFeatureCard({
                     </span>
                   ))}
                 </span>
-              </dd>
-            </div>
+              </span>
+            </li>
           ))}
-        </dl>
+        </ul>
         <div className="mt-auto flex min-h-8 flex-wrap items-center gap-3 pt-1 2xl:pt-0">
           {project.playLink && (
             <Link

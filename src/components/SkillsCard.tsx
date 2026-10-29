@@ -14,15 +14,15 @@ export default function SkillsCard() {
       >
         Skills
       </h3>
-      <dl className="grid grid-cols-1 gap-2 text-sm text-slate-300">
+      <ul role="list" className="grid grid-cols-1 gap-2 text-sm text-slate-300">
         {[
           { label: "Languages", items: skills.languages },
           { label: "Technologies", items: skills.technologies },
           { label: "Concepts", items: skills.concepts },
         ].map(({ label, items }) => (
-          <div key={label}>
-            <dt className="font-semibold text-orange-400">{label}</dt>
-            <dd className="mt-1 min-w-0">
+          <li key={label}>
+            <span className="block font-semibold text-orange-400">{label}</span>
+            <span className="mt-1 block min-w-0">
               <span className="flex flex-wrap gap-1.5">
                 {items.map((item, index) => (
                   <span
@@ -36,10 +36,10 @@ export default function SkillsCard() {
                   </span>
                 ))}
               </span>
-            </dd>
-          </div>
+            </span>
+          </li>
         ))}
-      </dl>
+      </ul>
     </section>
   );
 }

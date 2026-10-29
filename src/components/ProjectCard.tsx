@@ -33,15 +33,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="grid grid-cols-1 items-start gap-6 lg:grid-cols-[3fr_2fr]">
         <div className="min-w-0">
           <p className="mb-4 text-slate-300">{project.description}</p>
-          <dl className="grid grid-cols-1 gap-1.5 text-sm leading-5 text-slate-300">
+          <ul role="list" className="grid grid-cols-1 gap-1.5 text-sm leading-5 text-slate-300">
             {[
               { label: "Languages", items: project.languages },
               { label: "Technologies", items: project.technologies },
               { label: "Concepts", items: project.concepts },
             ].map(({ label, items }) => (
-              <div key={label}>
-                <dt className="font-semibold text-orange-400">{label}</dt>
-                <dd className="mt-1 min-w-0">
+              <li key={label}>
+                <span className="block font-semibold text-orange-400">{label}</span>
+                <span className="mt-1 block min-w-0">
                   <span className="flex flex-wrap gap-1.5">
                     {items.map((item, index) => (
                       <span
@@ -55,10 +55,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                       </span>
                     ))}
                   </span>
-                </dd>
-              </div>
+                </span>
+              </li>
             ))}
-          </dl>
+          </ul>
           <div className="mt-4">
             <div className="flex min-h-8 flex-wrap items-center gap-3">
               {project.playLink && (

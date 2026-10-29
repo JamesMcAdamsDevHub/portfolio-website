@@ -16,22 +16,22 @@ export default function EducationCard() {
       </h3>
       <p className="text-lg leading-6 font-semibold">{education.school}</p>
       <p className="text-sm text-slate-300">{education.location}</p>
-      <dl className="mt-2 grid gap-x-8 gap-y-2 text-sm text-slate-300 sm:grid-cols-[max-content_1fr]">
-        <div className="sm:col-span-2">
-          <dt className="font-semibold text-slate-100">Major</dt>
-          <dd>
+      <ul role="list" className="mt-2 grid gap-x-8 gap-y-2 text-sm text-slate-300 sm:grid-cols-[max-content_1fr]">
+        <li className="sm:col-span-2">
+          <span className="block font-semibold text-slate-100">Major</span>
+          <span className="block">
             {education.degree}
-          </dd>
-        </div>
-        <div>
-          <dt className="font-semibold text-slate-100">Graduation</dt>
-          <dd>{education.graduationDate}</dd>
-        </div>
-        <div>
-          <dt className="font-semibold text-slate-100">GPA</dt>
-          <dd>{education.gpa}</dd>
-        </div>
-      </dl>
+          </span>
+        </li>
+        <li>
+          <span className="block font-semibold text-slate-100">Graduation</span>
+          <span className="block">{education.graduationDate}</span>
+        </li>
+        <li>
+          <span className="block font-semibold text-slate-100">GPA</span>
+          <span className="block">{education.gpa}</span>
+        </li>
+      </ul>
     </section>
   );
 }
