@@ -54,21 +54,18 @@ export default function ProjectFeatureCard({
           ].map(({ label, items }) => (
             <li key={label}>
               <span className="block font-semibold text-orange-400">{label}</span>
-              <span className="mt-1 block min-w-0 2xl:mt-0.5">
-                <span className="flex flex-wrap gap-1.5 2xl:gap-1">
+              <div className="mt-1 min-w-0 2xl:mt-0.5">
+                <ul role="list" className="flex flex-wrap gap-1.5 2xl:gap-1">
                   {items.map((item, index) => (
-                    <span
+                    <li
                       key={`${item}-${index}`}
                       className="min-w-0 rounded-sm border border-slate-700 bg-slate-900 px-2 py-0.5 break-words 2xl:py-0"
                     >
                       {item}
-                      {index < items.length - 1 && (
-                        <span className="sr-only">, </span>
-                      )}
-                    </span>
+                    </li>
                   ))}
-                </span>
-              </span>
+                </ul>
+              </div>
             </li>
           ))}
         </ul>

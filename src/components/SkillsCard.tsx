@@ -22,21 +22,18 @@ export default function SkillsCard() {
         ].map(({ label, items }) => (
           <li key={label}>
             <span className="block font-semibold text-orange-400">{label}</span>
-            <span className="mt-1 block min-w-0">
-              <span className="flex flex-wrap gap-1.5">
+            <div className="mt-1 min-w-0">
+              <ul role="list" className="flex flex-wrap gap-1.5">
                 {items.map((item, index) => (
-                  <span
+                  <li
                     key={`${item}-${index}`}
                     className="min-w-0 rounded-sm border border-slate-600 bg-slate-900 px-2 py-0.5 break-words"
                   >
                     {item}
-                    {index < items.length - 1 && (
-                      <span className="sr-only">, </span>
-                    )}
-                  </span>
+                  </li>
                 ))}
-              </span>
-            </span>
+              </ul>
+            </div>
           </li>
         ))}
       </ul>
