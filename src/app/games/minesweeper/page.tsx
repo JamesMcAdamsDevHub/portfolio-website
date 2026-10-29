@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Minesweeper | James McAdams",
+  title: "Minesweeper by James McAdams",
 };
 
 export default function Minesweeper() {
@@ -18,8 +18,6 @@ export default function Minesweeper() {
 
   return (
     <main
-      id="main-content"
-      tabIndex={-1}
       className="mx-auto w-full max-w-7xl px-4 py-6 lg:px-8"
     >
       <header className="mx-auto mb-4 flex w-full max-w-xl flex-col items-center gap-2 text-center sm:flex-row sm:flex-wrap sm:items-baseline sm:justify-between sm:text-left landscape:max-w-[min(36rem,65dvh)]">

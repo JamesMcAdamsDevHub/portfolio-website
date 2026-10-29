@@ -7,14 +7,12 @@ import AboutCard from "@/components/AboutCard";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home | James McAdams",
+  title: "James McAdams Portfolio Home",
 };
 
 export default function Home() {
   return (
     <main
-      id="main-content"
-      tabIndex={-1}
       className="mx-auto w-full max-w-440 px-4 pt-4 pb-1 leading-relaxed lg:px-8 2xl:pb-0"
     >
       <div className="grid grid-cols-1 gap-6 2xl:grid-cols-[5fr_3fr]">

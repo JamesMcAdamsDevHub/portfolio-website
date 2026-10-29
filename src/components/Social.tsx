@@ -32,7 +32,7 @@ export default function Social({ platform }: Platform) {
       <Image
         className={`h-7 w-7 ${platform === "github" ? "invert" : ""}`}
         src={imagePath}
-        alt={imageAlt}
+        alt=""
         width={36}
         height={36}
       />
