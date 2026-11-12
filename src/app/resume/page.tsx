@@ -11,9 +11,7 @@ export const metadata: Metadata = {
 
 export default function Resume() {
   return (
-    <main
-      className="mx-auto flex w-full max-w-440 flex-col px-4 py-3 break-words leading-relaxed lg:px-8"
-    >
+    <main className="mx-auto flex w-full max-w-440 flex-col px-4 py-3 break-words leading-relaxed lg:px-8">
       <header className="mb-4 flex shrink-0 flex-col items-center justify-between gap-4 text-center md:flex-row md:flex-wrap md:items-start md:text-left">
         <div>
           <h1 className="text-3xl font-bold tracking-tight md:text-4xl">
@@ -36,7 +34,7 @@ export default function Resume() {
             <Social platform="instagram" />
           </div>
           <a
-            href="/documents/James-McAdams-Resume.pdf"
+            href="/documents/James_McAdams_Resume.pdf"
             download
             className="inline-flex min-h-11 items-center rounded-sm bg-orange-400 px-4 py-2 font-semibold text-slate-950 hover:bg-orange-300 motion-safe:transition-colors motion-safe:duration-150"
           >

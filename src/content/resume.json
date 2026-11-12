@@ -1,24 +1,24 @@
 {
   "name": "James McAdams",
   "email": "james.mcadams.dev@gmail.com",
-
   "skills": {
-    "languages": ["C", "C#", "Java", "Python", "TypeScript"],
+    "languages": ["C", "C#", "Java", "Python", "TypeScript", "JavaScript"],
     "technologies": [
       "Unity",
-      "Unreal Engine",
-      "Next.js",
       "React",
+      "Next.js",
+      "Tailwind CSS",
       "Git",
+      "Docker",
       "REST APIs"
     ],
     "concepts": [
-      "Agile/Scrum",
       "Object-Oriented Design",
-      "Data Structures & Algorithms"
+      "Data Structures",
+      "Agile/Scrum",
+      "Accessibility"
     ]
   },
-
   "education": {
     "school": "University of Central Florida",
     "location": "Orlando, FL",
@@ -26,7 +26,6 @@
     "graduationDate": "May 2028",
     "gpa": "4.0"
   },
-
   "experience": [
     {
       "company": "Curriculum Associates",
@@ -36,9 +35,9 @@
       "endDate": null,
       "details": [
         "Develop and maintain production educational software using Unity, C#, and Java",
-        "Implement features, resolve defects, and contribute to code reviews and testing",
-        "Built tooling to generate JSON datasets containing 10,000+ simulated student records",
-        "Develop Java API endpoints to read and write simulated student data for testing and demonstrations"
+        "Implement features, resolve defects, and participate in code reviews, testing, and technical documentation",
+        "Build Java APIs to manage simulated student data for testing and teacher reports",
+        "Contribute to security dependency updates and Docker image migrations"
       ],
       "featured": true
     },
